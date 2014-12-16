@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+//Project Include
 using System.Data.SqlClient;
 using PatientAppiontment.Data;
+using PatientAppiontment.View;
 
 namespace PatientAppiontment
 {
@@ -67,6 +69,34 @@ namespace PatientAppiontment
             string Sex;
             int Age;
             DateTime FoundDate;
+        }
+
+        /// <summary>
+        /// 程序退出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Menu_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// 设置数据库连接
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Menu_ConnectionSetting_Click(object sender, EventArgs e)
+        {
+            Form_ConnectionSetting _form_connectionSetting = new Form_ConnectionSetting();
+            _form_connectionSetting.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //连接字符串初始化
+            ConnectionString _connectionString = new ConnectionString();
+            _connectionString.Initial();
         }
 
 
