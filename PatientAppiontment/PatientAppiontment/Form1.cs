@@ -24,8 +24,7 @@ namespace PatientAppiontment
         public void StartConnectiont()
         {
             SqlConnection myConnection = new SqlConnection();
-            listBox1.Items.Clear();
-            myConnection.ConnectionString = @"Data Source = 192.168.1.70; Initial Catalog = engchaosheng; user id = zhangkai365; password = @Zhangkai851983;";
+            myConnection.ConnectionString = ConnectionString.Setting;
             myConnection.Open();
             System.Diagnostics.Stopwatch dataReadTime = new System.Diagnostics.Stopwatch();
             dataReadTime.Start();
@@ -46,7 +45,6 @@ namespace PatientAppiontment
             DataRow oneRow = myDataTable.NewRow();
             while (myDataReader.Read())
             {
-                listBox1.Items.Add(myDataReader.GetSqlDateTime(0).ToString());
                 myDataTable.Rows.Add(myDataTable.NewRow()["FoundDate"] = myDataReader.GetSqlDateTime(0).ToString());
             }
             myConnection.Close();
@@ -54,21 +52,11 @@ namespace PatientAppiontment
             label1.Text = dataReadTime.ElapsedMilliseconds.ToString();
             myDataSet.Tables.Add(myDataTable);
             DataView dataViewSource = new DataView(myDataTable);
-            dataGridView1.DataSource = dataViewSource;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             StartConnectiont();
-        }
-
-        public class PatientRecords
-        {
-            string ArchiveCode;
-            string PatientName;
-            string Sex;
-            int Age;
-            DateTime FoundDate;
         }
 
         /// <summary>
@@ -97,6 +85,82 @@ namespace PatientAppiontment
             //连接字符串初始化
             ConnectionString _connectionString = new ConnectionString();
             _connectionString.Initial();
+        }
+
+        public void ReadPatient()
+        {
+            DateTime viewDate = new DateTime();
+            viewDate = dateTimePicker1.Value.Date;
+            DataSetPatientRecord _dataSetPatientRecord = new DataSetPatientRecord();
+            SqlDataAdapter _dataAdapterArchiveCode = new SqlDataAdapter("Select [ArchiveCode] FROM [PatientCheck] WHERE [BookinDate]='"+ viewDate + "'", ConnectionString.Setting);
+            _dataAdapterArchiveCode.Fill(_dataSetPatientRecord);
+            DataView myDataView = new DataView(_dataSetPatientRecord.PatientCheck);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReadPatientCheck();
+        }
+
+        public void ReadPatientCheck()
+        {
+            DateTime viewDate = new DateTime();
+            viewDate = dateTimePicker1.Value.Date;
+            string commandText = @"SELECT [ArchiveCode],[CheckCode],[ReDiagnosisTimes],[DiagnosisDevice],[Origin] FROM [dbo].[PatientCheck] WHERE [BookinDate] = '"+ viewDate + @"'";
+            SqlConnection cn = new SqlConnection(ConnectionString.Setting);
+            cn.Open();
+            SqlCommand mnSqlCommand = new SqlCommand(commandText,cn);
+            SqlDataReader mnDataReader = mnSqlCommand.ExecuteReader();
+            List<mnTablePatientCheck> mnListTablePatientCheck = new List<mnTablePatientCheck>();
+            while (mnDataReader.Read())
+            {
+                mnListTablePatientCheck.Add(new mnTablePatientCheck() { 
+                    ArchiveCode = mnDataReader.GetString(0), 
+                    CheckCode = mnDataReader.GetString(1),
+                    ReDiagnosisTimes = mnDataReader.GetInt32(2),
+                    DiagnosisDevice = mnDataReader.GetString(3),
+                    Origin = mnDataReader.GetString(4)
+                });
+            }
+            cn.Close();
+            
+            //ColumnHeader[] CH = new ColumnHeader[5];
+            //CH[0].Text = @"ArchiveCode";
+            //CH[1].Text = @"CheckCode";
+            //CH[2].Text = @"ReDiagnosisTimes";
+            //CH[3].Text = @"DiagnosisDevice";
+            //CH[4].Text = @"Origin";
+            //listView1.Columns.AddRange(CH);
+            //ListViewItem[] LV = new ListViewItem[5];
+            listView1.GridLines = true;
+            listView1.View = System.Windows.Forms.View.Details;
+            listView1.FullRowSelect = true;
+            listView1.Columns.Add(@"Index");
+            listView1.Columns.Add(@"ArchiveCode");
+            listView1.Columns.Add(@"CheckCode");
+            listView1.Columns.Add(@"ReDiagnosisTimes");
+            listView1.Columns.Add(@"DiagnosisDevice");
+            listView1.Columns.Add(@"Origin");
+
+            int recordNum = mnListTablePatientCheck.Count();
+            label2.Text = recordNum.ToString();
+            for (int i = 0; i < mnListTablePatientCheck.Count; i++)
+            {
+                ListViewItem tempItem = new ListViewItem();
+                tempItem.Text = i.ToString();
+                tempItem.SubItems.Add(mnListTablePatientCheck[i].ArchiveCode.ToString());
+                tempItem.SubItems.Add(mnListTablePatientCheck[i].CheckCode.ToString());
+                tempItem.SubItems.Add(mnListTablePatientCheck[i].ReDiagnosisTimes.ToString());
+                tempItem.SubItems.Add(mnListTablePatientCheck[i].DiagnosisDevice.ToString());
+                tempItem.SubItems.Add(mnListTablePatientCheck[i].Origin.ToString());
+                listView1.Items.Add(tempItem);
+            }
+        }
+
+        private void btn_AddNewExam_Click(object sender, EventArgs e)
+        {
+            AddNewExam _addNewExam = new AddNewExam();
+            _addNewExam.ShowDialog();
         }
 
 
