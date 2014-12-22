@@ -18,7 +18,16 @@ namespace PatientAppiontment.View
 
         private void btn_Confrom_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (CheckInput())
+            {
+ 
+            }
         }
+
+        public bool CheckInput()
+        {
+            return true;
+        }
+
     }
 }

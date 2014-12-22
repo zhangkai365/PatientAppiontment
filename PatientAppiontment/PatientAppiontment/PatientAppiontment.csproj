@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\DataPackage.cs" />
+    <Compile Include="Control\Exam_Add.cs" />
     <Compile Include="Data\ConnectionString.cs" />
     <Compile Include="Data\DataSetPatientRecord.Designer.cs">
       <AutoGen>True</AutoGen>
