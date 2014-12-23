@@ -65,16 +65,27 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.chk_Holter = new System.Windows.Forms.CheckBox();
+            this.chk_TCD = new System.Windows.Forms.CheckBox();
+            this.chk_HeartFunction = new System.Windows.Forms.CheckBox();
+            this.chk = new System.Windows.Forms.CheckBox();
+            this.dtp_Holter = new System.Windows.Forms.DateTimePicker();
+            this.dtp_TCD = new System.Windows.Forms.DateTimePicker();
+            this.dtp_HeartFunction = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.chk_PulFuc_Respiratory = new System.Windows.Forms.CheckBox();
+            this.chk_PulFuc_Diffusion = new System.Windows.Forms.CheckBox();
+            this.chk_BMD = new System.Windows.Forms.CheckBox();
+            this.chk_EEG = new System.Windows.Forms.CheckBox();
+            this.dtp_PulFuc_Respiratory = new System.Windows.Forms.DateTimePicker();
+            this.dtp_PulFuc_Diffusion = new System.Windows.Forms.DateTimePicker();
+            this.dtp_BMD = new System.Windows.Forms.DateTimePicker();
+            this.dtp_EEG = new System.Windows.Forms.DateTimePicker();
             this.cmb_PatientDoctor = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_PatientBedNum = new System.Windows.Forms.TextBox();
@@ -88,17 +99,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_PatientName = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker12 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker14 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker16 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -496,13 +496,13 @@
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label11, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label12, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox13, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox14, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox15, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox16, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker5, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker6, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.chk_Holter, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.chk_TCD, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.chk_HeartFunction, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.chk, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.dtp_Holter, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dtp_TCD, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.dtp_HeartFunction, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker8, 1, 4);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 18);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -543,72 +543,72 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "打印预约单";
             // 
-            // checkBox13
+            // chk_Holter
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(3, 43);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(84, 16);
-            this.checkBox13.TabIndex = 3;
-            this.checkBox13.Text = "动态心电图";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.chk_Holter.AutoSize = true;
+            this.chk_Holter.Location = new System.Drawing.Point(3, 43);
+            this.chk_Holter.Name = "chk_Holter";
+            this.chk_Holter.Size = new System.Drawing.Size(84, 16);
+            this.chk_Holter.TabIndex = 3;
+            this.chk_Holter.Text = "动态心电图";
+            this.chk_Holter.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // chk_TCD
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(3, 73);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(84, 16);
-            this.checkBox14.TabIndex = 4;
-            this.checkBox14.Text = "经颅多普勒";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.chk_TCD.AutoSize = true;
+            this.chk_TCD.Location = new System.Drawing.Point(3, 73);
+            this.chk_TCD.Name = "chk_TCD";
+            this.chk_TCD.Size = new System.Drawing.Size(84, 16);
+            this.chk_TCD.TabIndex = 4;
+            this.chk_TCD.Text = "经颅多普勒";
+            this.chk_TCD.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // chk_HeartFunction
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(3, 103);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(60, 16);
-            this.checkBox15.TabIndex = 5;
-            this.checkBox15.Text = "心功能";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.chk_HeartFunction.AutoSize = true;
+            this.chk_HeartFunction.Location = new System.Drawing.Point(3, 103);
+            this.chk_HeartFunction.Name = "chk_HeartFunction";
+            this.chk_HeartFunction.Size = new System.Drawing.Size(60, 16);
+            this.chk_HeartFunction.TabIndex = 5;
+            this.chk_HeartFunction.Text = "心功能";
+            this.chk_HeartFunction.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // chk
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(3, 133);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(72, 16);
-            this.checkBox16.TabIndex = 6;
-            this.checkBox16.Text = "动脉硬化";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.chk.AutoSize = true;
+            this.chk.Location = new System.Drawing.Point(3, 133);
+            this.chk.Name = "chk";
+            this.chk.Size = new System.Drawing.Size(72, 16);
+            this.chk.TabIndex = 6;
+            this.chk.Text = "动脉硬化";
+            this.chk.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // dtp_Holter
             // 
-            this.dateTimePicker2.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(168, 43);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(150, 21);
-            this.dateTimePicker2.TabIndex = 7;
+            this.dtp_Holter.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_Holter.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_Holter.Location = new System.Drawing.Point(168, 43);
+            this.dtp_Holter.Name = "dtp_Holter";
+            this.dtp_Holter.Size = new System.Drawing.Size(150, 21);
+            this.dtp_Holter.TabIndex = 7;
             // 
-            // dateTimePicker5
+            // dtp_TCD
             // 
-            this.dateTimePicker5.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker5.Location = new System.Drawing.Point(168, 73);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(150, 21);
-            this.dateTimePicker5.TabIndex = 8;
+            this.dtp_TCD.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_TCD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_TCD.Location = new System.Drawing.Point(168, 73);
+            this.dtp_TCD.Name = "dtp_TCD";
+            this.dtp_TCD.Size = new System.Drawing.Size(150, 21);
+            this.dtp_TCD.TabIndex = 8;
             // 
-            // dateTimePicker6
+            // dtp_HeartFunction
             // 
-            this.dateTimePicker6.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker6.Location = new System.Drawing.Point(168, 103);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(150, 21);
-            this.dateTimePicker6.TabIndex = 9;
+            this.dtp_HeartFunction.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_HeartFunction.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_HeartFunction.Location = new System.Drawing.Point(168, 103);
+            this.dtp_HeartFunction.Name = "dtp_HeartFunction";
+            this.dtp_HeartFunction.Size = new System.Drawing.Size(150, 21);
+            this.dtp_HeartFunction.TabIndex = 9;
             // 
             // dateTimePicker8
             // 
@@ -638,14 +638,14 @@
             this.tableLayoutPanel3.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label15, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label16, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.checkBox17, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.checkBox18, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.checkBox19, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.checkBox20, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker10, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker12, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker14, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker16, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.chk_PulFuc_Respiratory, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.chk_PulFuc_Diffusion, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.chk_BMD, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.chk_EEG, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_PulFuc_Respiratory, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_PulFuc_Diffusion, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_BMD, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_EEG, 1, 4);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 23);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 7;
@@ -658,6 +658,109 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(550, 350);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "检查项目";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(168, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 12);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "预约检查时间和日期";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(388, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 12);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "选取要打印项目";
+            // 
+            // chk_PulFuc_Respiratory
+            // 
+            this.chk_PulFuc_Respiratory.AutoSize = true;
+            this.chk_PulFuc_Respiratory.Location = new System.Drawing.Point(3, 43);
+            this.chk_PulFuc_Respiratory.Name = "chk_PulFuc_Respiratory";
+            this.chk_PulFuc_Respiratory.Size = new System.Drawing.Size(120, 16);
+            this.chk_PulFuc_Respiratory.TabIndex = 3;
+            this.chk_PulFuc_Respiratory.Text = "肺功能：通气功能";
+            this.chk_PulFuc_Respiratory.UseVisualStyleBackColor = true;
+            // 
+            // chk_PulFuc_Diffusion
+            // 
+            this.chk_PulFuc_Diffusion.AutoSize = true;
+            this.chk_PulFuc_Diffusion.Location = new System.Drawing.Point(3, 73);
+            this.chk_PulFuc_Diffusion.Name = "chk_PulFuc_Diffusion";
+            this.chk_PulFuc_Diffusion.Size = new System.Drawing.Size(120, 16);
+            this.chk_PulFuc_Diffusion.TabIndex = 4;
+            this.chk_PulFuc_Diffusion.Text = "肺功能：弥散功能";
+            this.chk_PulFuc_Diffusion.UseVisualStyleBackColor = true;
+            // 
+            // chk_BMD
+            // 
+            this.chk_BMD.AutoSize = true;
+            this.chk_BMD.Location = new System.Drawing.Point(3, 103);
+            this.chk_BMD.Name = "chk_BMD";
+            this.chk_BMD.Size = new System.Drawing.Size(60, 16);
+            this.chk_BMD.TabIndex = 5;
+            this.chk_BMD.Text = "骨密度";
+            this.chk_BMD.UseVisualStyleBackColor = true;
+            // 
+            // chk_EEG
+            // 
+            this.chk_EEG.AutoSize = true;
+            this.chk_EEG.Location = new System.Drawing.Point(3, 133);
+            this.chk_EEG.Name = "chk_EEG";
+            this.chk_EEG.Size = new System.Drawing.Size(60, 16);
+            this.chk_EEG.TabIndex = 6;
+            this.chk_EEG.Text = "脑电图";
+            this.chk_EEG.UseVisualStyleBackColor = true;
+            // 
+            // dtp_PulFuc_Respiratory
+            // 
+            this.dtp_PulFuc_Respiratory.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_PulFuc_Respiratory.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_PulFuc_Respiratory.Location = new System.Drawing.Point(168, 43);
+            this.dtp_PulFuc_Respiratory.Name = "dtp_PulFuc_Respiratory";
+            this.dtp_PulFuc_Respiratory.Size = new System.Drawing.Size(200, 21);
+            this.dtp_PulFuc_Respiratory.TabIndex = 8;
+            // 
+            // dtp_PulFuc_Diffusion
+            // 
+            this.dtp_PulFuc_Diffusion.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_PulFuc_Diffusion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_PulFuc_Diffusion.Location = new System.Drawing.Point(168, 73);
+            this.dtp_PulFuc_Diffusion.Name = "dtp_PulFuc_Diffusion";
+            this.dtp_PulFuc_Diffusion.Size = new System.Drawing.Size(200, 21);
+            this.dtp_PulFuc_Diffusion.TabIndex = 9;
+            // 
+            // dtp_BMD
+            // 
+            this.dtp_BMD.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_BMD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_BMD.Location = new System.Drawing.Point(168, 103);
+            this.dtp_BMD.Name = "dtp_BMD";
+            this.dtp_BMD.Size = new System.Drawing.Size(200, 21);
+            this.dtp_BMD.TabIndex = 10;
+            // 
+            // dtp_EEG
+            // 
+            this.dtp_EEG.CustomFormat = "hh：mm yyyy-MM-dd";
+            this.dtp_EEG.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_EEG.Location = new System.Drawing.Point(168, 133);
+            this.dtp_EEG.Name = "dtp_EEG";
+            this.dtp_EEG.Size = new System.Drawing.Size(200, 21);
+            this.dtp_EEG.TabIndex = 11;
             // 
             // cmb_PatientDoctor
             // 
@@ -770,109 +873,6 @@
             this.txt_PatientName.Size = new System.Drawing.Size(94, 21);
             this.txt_PatientName.TabIndex = 0;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "检查项目";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(168, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 12);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "预约检查时间和日期";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(388, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 12);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "选取要打印项目";
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(3, 43);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(120, 16);
-            this.checkBox17.TabIndex = 3;
-            this.checkBox17.Text = "肺功能：通气功能";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(3, 73);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(120, 16);
-            this.checkBox18.TabIndex = 4;
-            this.checkBox18.Text = "肺功能：弥散功能";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(3, 103);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(60, 16);
-            this.checkBox19.TabIndex = 5;
-            this.checkBox19.Text = "骨密度";
-            this.checkBox19.UseVisualStyleBackColor = true;
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(3, 133);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(60, 16);
-            this.checkBox20.TabIndex = 6;
-            this.checkBox20.Text = "脑电图";
-            this.checkBox20.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker10
-            // 
-            this.dateTimePicker10.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker10.Location = new System.Drawing.Point(168, 43);
-            this.dateTimePicker10.Name = "dateTimePicker10";
-            this.dateTimePicker10.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker10.TabIndex = 8;
-            // 
-            // dateTimePicker12
-            // 
-            this.dateTimePicker12.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker12.Location = new System.Drawing.Point(168, 73);
-            this.dateTimePicker12.Name = "dateTimePicker12";
-            this.dateTimePicker12.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker12.TabIndex = 9;
-            // 
-            // dateTimePicker14
-            // 
-            this.dateTimePicker14.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker14.Location = new System.Drawing.Point(168, 103);
-            this.dateTimePicker14.Name = "dateTimePicker14";
-            this.dateTimePicker14.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker14.TabIndex = 10;
-            // 
-            // dateTimePicker16
-            // 
-            this.dateTimePicker16.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker16.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker16.Location = new System.Drawing.Point(168, 133);
-            this.dateTimePicker16.Name = "dateTimePicker16";
-            this.dateTimePicker16.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker16.TabIndex = 11;
-            // 
             // AddNewExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -950,25 +950,25 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
+        private System.Windows.Forms.CheckBox chk_Holter;
+        private System.Windows.Forms.CheckBox chk_TCD;
+        private System.Windows.Forms.CheckBox chk_HeartFunction;
+        private System.Windows.Forms.CheckBox chk;
+        private System.Windows.Forms.DateTimePicker dtp_Holter;
+        private System.Windows.Forms.DateTimePicker dtp_TCD;
+        private System.Windows.Forms.DateTimePicker dtp_HeartFunction;
         private System.Windows.Forms.DateTimePicker dateTimePicker8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.DateTimePicker dateTimePicker10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker16;
+        private System.Windows.Forms.CheckBox chk_PulFuc_Respiratory;
+        private System.Windows.Forms.CheckBox chk_PulFuc_Diffusion;
+        private System.Windows.Forms.CheckBox chk_BMD;
+        private System.Windows.Forms.CheckBox chk_EEG;
+        private System.Windows.Forms.DateTimePicker dtp_PulFuc_Respiratory;
+        private System.Windows.Forms.DateTimePicker dtp_PulFuc_Diffusion;
+        private System.Windows.Forms.DateTimePicker dtp_BMD;
+        private System.Windows.Forms.DateTimePicker dtp_EEG;
     }
 }
