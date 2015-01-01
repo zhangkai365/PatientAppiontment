@@ -24,7 +24,7 @@ namespace PatientAppiontment
         public void StartConnectiont()
         {
             SqlConnection myConnection = new SqlConnection();
-            myConnection.ConnectionString = ConnectionString.Setting;
+            myConnection.ConnectionString = AppConnection.UltraSoundDataBaseConnectionString;
             myConnection.Open();
             System.Diagnostics.Stopwatch dataReadTime = new System.Diagnostics.Stopwatch();
             dataReadTime.Start();
@@ -82,9 +82,6 @@ namespace PatientAppiontment
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //连接字符串初始化
-            ConnectionString _connectionString = new ConnectionString();
-            _connectionString.Initial();
         }
 
         public void ReadPatient()
@@ -92,7 +89,7 @@ namespace PatientAppiontment
             DateTime viewDate = new DateTime();
             viewDate = dateTimePicker1.Value.Date;
             DataSetPatientRecord _dataSetPatientRecord = new DataSetPatientRecord();
-            SqlDataAdapter _dataAdapterArchiveCode = new SqlDataAdapter("Select [ArchiveCode] FROM [PatientCheck] WHERE [BookinDate]='"+ viewDate + "'", ConnectionString.Setting);
+            SqlDataAdapter _dataAdapterArchiveCode = new SqlDataAdapter("Select [ArchiveCode] FROM [PatientCheck] WHERE [BookinDate]='"+ viewDate + "'", AppConnection.UltraSoundDataBaseConnectionString);
             _dataAdapterArchiveCode.Fill(_dataSetPatientRecord);
             DataView myDataView = new DataView(_dataSetPatientRecord.PatientCheck);
         }
@@ -107,7 +104,7 @@ namespace PatientAppiontment
             DateTime viewDate = new DateTime();
             viewDate = dateTimePicker1.Value.Date;
             string commandText = @"SELECT [ArchiveCode],[CheckCode],[ReDiagnosisTimes],[DiagnosisDevice],[Origin] FROM [dbo].[PatientCheck] WHERE [BookinDate] = '"+ viewDate + @"'";
-            SqlConnection cn = new SqlConnection(ConnectionString.Setting);
+            SqlConnection cn = new SqlConnection(AppConnection.UltraSoundDataBaseConnectionString);
             cn.Open();
             SqlCommand mnSqlCommand = new SqlCommand(commandText,cn);
             SqlDataReader mnDataReader = mnSqlCommand.ExecuteReader();
@@ -161,6 +158,25 @@ namespace PatientAppiontment
         {
             AddNewExam _addNewExam = new AddNewExam();
             _addNewExam.ShowDialog();
+        }
+
+        private void 测试建立数据库ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SqlConnectionStringBuilder ssb = new SqlConnectionStringBuilder();
+            ssb.DataSource = @"192.168.1.70";
+            ssb.UserID = @"zhangkai365";
+            ssb.Password = @"@Zhangkai851983";
+
+            string testconnection = @"Data Source = 192.168.1.70; User ID = zhangkai365; Password = @Zhangkai851983; Initial Catalog = engchaosheng;";
+            SqlConnection testConnection = new SqlConnection(testconnection);
+            testConnection.Open();
+            MessageBox.Show(testconnection);
+        }
+
+        private void Menu_DataBaseManagement_Click(object sender, EventArgs e)
+        {
+            Form_DataBaseManagement mnForm_DataBaseManagement = new Form_DataBaseManagement();
+            mnForm_DataBaseManagement.ShowDialog();
         }
 
 

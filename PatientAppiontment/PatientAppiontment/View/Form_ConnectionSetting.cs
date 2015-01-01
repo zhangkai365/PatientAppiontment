@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 //Project Include
 using PatientAppiontment.Data;
+using System.Data.SqlClient;
 
 namespace PatientAppiontment.View
 {
@@ -26,7 +27,10 @@ namespace PatientAppiontment.View
         /// <param name="e"></param>
         private void Form_ConnectionSetting_Load(object sender, EventArgs e)
         {
-            textBoxUpdate();
+            cmb_DataBaseSelect.Items.Add(@"预约数据库连接");
+            cmb_DataBaseSelect.Items.Add(@"超声工作站数据库连接");
+            cmb_DataBaseSelect.SelectedIndex = 0;
+            UIUpdate(cmb_DataBaseSelect.SelectedIndex);
         }
 
         /// <summary>
@@ -37,10 +41,9 @@ namespace PatientAppiontment.View
         private void btn_ResetDefalut_Click(object sender, EventArgs e)
         {
             //连接字符串初始化
-            ConnectionString _connectionString = new ConnectionString();
+            ConnectionMethod _connectionString = new ConnectionMethod();
             _connectionString.Reset();
-            textBoxUpdate();
-
+            UIUpdate(cmb_DataBaseSelect.SelectedIndex);
         }
 
         /// <summary>
@@ -50,12 +53,38 @@ namespace PatientAppiontment.View
         /// <param name="e"></param>
         private void btn_SaveAndTest_Click(object sender, EventArgs e)
         {
-            ConnectionString._dataSource = txt_DataSource.Text;
-            ConnectionString._initialCatalog = txt_InitialCatalog.Text;
-            ConnectionString._userID = txt_UserID.Text;
-            ConnectionString._password = txt_Password.Text;
-            ConnectionString _connectionString = new ConnectionString();
-            _connectionString.Update();
+            string testConnectionResult = @"测试程序出现问题，";
+            ConnectionGroup updateConnection = new ConnectionGroup() { 
+                dataSource = txt_DataSource.Text, 
+                initialCatalog = txt_InitialCatalog.Text, 
+                userID = txt_UserID.Text, 
+                password = txt_Password.Text, 
+                intergratedSecurity = false };
+            ConnectionMethod connectionMethod = new ConnectionMethod();
+            connectionMethod.Update(cmb_DataBaseSelect.SelectedIndex, updateConnection);
+            if (cmb_DataBaseSelect.SelectedIndex == 0)
+            {
+                if (IsConnectionAvailable(AppConnection.AppiontmentDataBaseConnectionString))
+                {
+                    testConnectionResult = @"连接" + cmb_DataBaseSelect.SelectedItem.ToString() + "成功！";
+                }
+                else
+                {
+                    testConnectionResult = @"连接" + cmb_DataBaseSelect.SelectedItem.ToString() + "失败！";
+                }
+            }
+            if (cmb_DataBaseSelect.SelectedIndex == 1)
+            {
+                if (IsConnectionAvailable(AppConnection.UltraSoundDataBaseConnectionString))
+                {
+                    testConnectionResult = "连接" + cmb_DataBaseSelect.SelectedItem.ToString() + "成功！";
+                }
+                else
+                {
+                    testConnectionResult = "连接" + cmb_DataBaseSelect.SelectedItem.ToString() + "失败";
+                }
+            }
+            MessageBox.Show(testConnectionResult);
         }
 
         /// <summary>
@@ -69,15 +98,54 @@ namespace PatientAppiontment.View
         }
 
         /// <summary>
-        /// 更新文本框
+        /// 根据传入的参数更新文本框
         /// </summary>
-        public void textBoxUpdate()
+        public void UIUpdate(int selectDatabaseConnectionIndex)
         {
-            txt_DataSource.Text = ConnectionString._dataSource;
-            txt_InitialCatalog.Text = ConnectionString._initialCatalog;
-            txt_UserID.Text = ConnectionString._userID;
-            txt_Password.Text = ConnectionString._password;
+            if (selectDatabaseConnectionIndex == 0)
+            {
+                txt_DataSource.Text = AppConnection.AppiontmentDataBaseConnectionGroup.dataSource;
+                txt_InitialCatalog.Text = AppConnection.AppiontmentDataBaseConnectionGroup.initialCatalog;
+                txt_UserID.Text = AppConnection.AppiontmentDataBaseConnectionGroup.userID;
+                txt_Password.Text = AppConnection.AppiontmentDataBaseConnectionGroup.password; 
+            }
+            if (selectDatabaseConnectionIndex == 1)
+            {
+                txt_DataSource.Text = AppConnection.UltraSoundDataBaseConnectionGroup.dataSource;
+                txt_InitialCatalog.Text = AppConnection.UltraSoundDataBaseConnectionGroup.initialCatalog;
+                txt_UserID.Text = AppConnection.UltraSoundDataBaseConnectionGroup.userID;
+                txt_Password.Text = AppConnection.UltraSoundDataBaseConnectionGroup.password;
+            }
         }
 
+        /// <summary>
+        /// 下拉选择框选择其他的选项
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmb_DataBaseSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UIUpdate(cmb_DataBaseSelect.SelectedIndex);
+        }
+
+        public bool IsConnectionAvailable(string connectionString)
+        {
+            bool IsAvailable = false;
+            SqlConnection testConnection = new SqlConnection(connectionString);
+            try
+            {
+                testConnection.Open();
+                IsAvailable = true;
+            }
+            catch
+            {
+                IsAvailable = false;
+            }
+            finally
+            {
+                testConnection.Close();
+            }
+            return IsAvailable;
+        }
     }
 }

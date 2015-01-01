@@ -15,6 +15,14 @@ namespace PatientAppiontment.Control
     public class DataPackage
     {
         /// <summary>
+        /// 序号
+        /// </summary>
+        public string ArchiveCode
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// 姓名
         /// </summary>
         public string PatientName
@@ -34,6 +42,14 @@ namespace PatientAppiontment.Control
         /// 年龄
         /// </summary>
         public int PatientAge
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// 年龄单位
+        /// </summary>
+        public string PatientAgeSymbol
         {
             get;
             set;

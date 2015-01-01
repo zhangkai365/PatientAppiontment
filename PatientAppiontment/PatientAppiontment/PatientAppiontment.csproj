@@ -45,9 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\Status.cs" />
     <Compile Include="Control\DataPackage.cs" />
     <Compile Include="Control\Exam_Add.cs" />
     <Compile Include="Data\ConnectionString.cs" />
+    <Compile Include="Data\CreateDataBase.cs" />
     <Compile Include="Data\DataSetPatientRecord.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +76,12 @@
     <Compile Include="View\Form_ConnectionSetting.Designer.cs">
       <DependentUpon>Form_ConnectionSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form_DataBaseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form_DataBaseManagement.Designer.cs">
+      <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form_ConnectionSetting.resx">
       <DependentUpon>Form_ConnectionSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form_DataBaseManagement.resx">
+      <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\DataSetPatientRecord.xsc">
       <DependentUpon>DataSetPatientRecord.xsd</DependentUpon>

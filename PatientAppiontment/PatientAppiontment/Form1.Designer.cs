@@ -32,13 +32,15 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Menu_NewAppiontment = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_ConnectionSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_DataBaseManagement_Top = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_AddNewExam = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Menu_ConnectionStringSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_DataBaseManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +65,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu_NewAppiontment,
-            this.Menu_ConnectionSetting,
+            this.Menu_DataBaseManagement_Top,
             this.Menu_Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -77,12 +79,14 @@
             this.Menu_NewAppiontment.Size = new System.Drawing.Size(80, 21);
             this.Menu_NewAppiontment.Text = "预约新病人";
             // 
-            // Menu_ConnectionSetting
+            // Menu_DataBaseManagement_Top
             // 
-            this.Menu_ConnectionSetting.Name = "Menu_ConnectionSetting";
-            this.Menu_ConnectionSetting.Size = new System.Drawing.Size(104, 21);
-            this.Menu_ConnectionSetting.Text = "设置数据库连接";
-            this.Menu_ConnectionSetting.Click += new System.EventHandler(this.Menu_ConnectionSetting_Click);
+            this.Menu_DataBaseManagement_Top.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_ConnectionStringSetting,
+            this.Menu_DataBaseManagement});
+            this.Menu_DataBaseManagement_Top.Name = "Menu_DataBaseManagement_Top";
+            this.Menu_DataBaseManagement_Top.Size = new System.Drawing.Size(140, 21);
+            this.Menu_DataBaseManagement_Top.Text = "数据库管理及连接设置";
             // 
             // Menu_Exit
             // 
@@ -106,23 +110,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "预约患者列表";
             // 
-            // button2
+            // btn_AddNewExam
             // 
-            this.button2.Location = new System.Drawing.Point(445, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 28);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "查询";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(6, 53);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(668, 500);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.btn_AddNewExam.Location = new System.Drawing.Point(568, 18);
+            this.btn_AddNewExam.Name = "btn_AddNewExam";
+            this.btn_AddNewExam.Size = new System.Drawing.Size(103, 28);
+            this.btn_AddNewExam.TabIndex = 9;
+            this.btn_AddNewExam.Text = "新增检查";
+            this.btn_AddNewExam.UseVisualStyleBackColor = true;
+            this.btn_AddNewExam.Click += new System.EventHandler(this.btn_AddNewExam_Click);
             // 
             // label2
             // 
@@ -133,15 +129,37 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "label2";
             // 
-            // btn_AddNewExam
+            // listView1
             // 
-            this.btn_AddNewExam.Location = new System.Drawing.Point(568, 18);
-            this.btn_AddNewExam.Name = "btn_AddNewExam";
-            this.btn_AddNewExam.Size = new System.Drawing.Size(103, 28);
-            this.btn_AddNewExam.TabIndex = 9;
-            this.btn_AddNewExam.Text = "新增检查";
-            this.btn_AddNewExam.UseVisualStyleBackColor = true;
-            this.btn_AddNewExam.Click += new System.EventHandler(this.btn_AddNewExam_Click);
+            this.listView1.Location = new System.Drawing.Point(6, 53);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(668, 500);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(445, 18);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 28);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "查询";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Menu_ConnectionStringSetting
+            // 
+            this.Menu_ConnectionStringSetting.Name = "Menu_ConnectionStringSetting";
+            this.Menu_ConnectionStringSetting.Size = new System.Drawing.Size(160, 22);
+            this.Menu_ConnectionStringSetting.Text = "数据库连接设置";
+            this.Menu_ConnectionStringSetting.Click += new System.EventHandler(this.Menu_ConnectionSetting_Click);
+            // 
+            // Menu_DataBaseManagement
+            // 
+            this.Menu_DataBaseManagement.Name = "Menu_DataBaseManagement";
+            this.Menu_DataBaseManagement.Size = new System.Drawing.Size(160, 22);
+            this.Menu_DataBaseManagement.Text = "数据库管理";
+            this.Menu_DataBaseManagement.Click += new System.EventHandler(this.Menu_DataBaseManagement_Click);
             // 
             // Form1
             // 
@@ -170,13 +188,15 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Menu_NewAppiontment;
-        private System.Windows.Forms.ToolStripMenuItem Menu_ConnectionSetting;
+        private System.Windows.Forms.ToolStripMenuItem Menu_DataBaseManagement_Top;
         private System.Windows.Forms.ToolStripMenuItem Menu_Exit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_AddNewExam;
+        private System.Windows.Forms.ToolStripMenuItem Menu_ConnectionStringSetting;
+        private System.Windows.Forms.ToolStripMenuItem Menu_DataBaseManagement;
     }
 }
 
