@@ -49,7 +49,7 @@
     <Compile Include="Control\DataPackage.cs" />
     <Compile Include="Control\Exam_Add.cs" />
     <Compile Include="Data\ConnectionString.cs" />
-    <Compile Include="Data\CreateDataBase.cs" />
+    <Compile Include="Data\DataBaseManagement.cs" />
     <Compile Include="Data\DataSetPatientRecord.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,11 +64,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AddNewExam.cs">
+    <Compile Include="View\ExamDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AddNewExam.Designer.cs">
-      <DependentUpon>AddNewExam.cs</DependentUpon>
+    <Compile Include="View\ExamDisplay.Designer.cs">
+      <DependentUpon>ExamDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form_ConnectionSetting.cs">
       <SubType>Form</SubType>
@@ -94,8 +94,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\AddNewExam.resx">
-      <DependentUpon>AddNewExam.cs</DependentUpon>
+    <EmbeddedResource Include="View\ExamDisplay.resx">
+      <DependentUpon>ExamDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form_ConnectionSetting.resx">
       <DependentUpon>Form_ConnectionSetting.cs</DependentUpon>

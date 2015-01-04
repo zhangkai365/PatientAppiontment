@@ -9,14 +9,23 @@ namespace PatientAppiontment.Common
     {
         Fail = 0,
         Success = 1,
-        Warning = 2
+        Error = 2,
+        Initial = 9
     }
+    public enum Existence
+    {
+        No = 0,
+        Yes = 1,
+        Unknown = 2,
+        Initial = 9
+    }
+
     public class Status
     {
         /// <summary>
         /// 执行的代码片段名称
         /// </summary>
-        public string CodeSnippetName;
+        public string codeSnippetName;
         /// <summary>
         /// 运行结果
         /// </summary>
@@ -24,10 +33,19 @@ namespace PatientAppiontment.Common
         /// <summary>
         /// 默认的信息
         /// </summary>
-        public string Message;
+        public string message;
         /// <summary>
         /// 信息字典编号
         /// </summary>
-        public string MesgDicIndex;
+        public string index;
     }
+
+    public class Status_Existence
+    {
+        public string codeSnippetName;
+        public Existence exsitence;
+        public string message;
+        public string index;
+    }
+
 }

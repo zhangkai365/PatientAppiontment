@@ -39,9 +39,9 @@ namespace PatientAppiontment.Control
                 System.Windows.Forms.MessageBox.Show("出错了！");
                 return new Status() {
                     result = Result.Success, 
-                    Message = @"Successful compelete Add the new patient data to base.", 
-                    CodeSnippetName = @"AddToDataBase", 
-                    MesgDicIndex = @"C.0001"};
+                    message = @"Successful compelete Add the new patient data to base.", 
+                    codeSnippetName = @"AddToDataBase", 
+                    index = @"C.0001"};
             }
             return new Status() { 
  };

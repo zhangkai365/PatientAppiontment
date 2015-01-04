@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using PatientAppiontment.Data;
 using PatientAppiontment.View;
+using PatientAppiontment.Common;
 
 namespace PatientAppiontment
 {
@@ -156,7 +157,8 @@ namespace PatientAppiontment
 
         private void btn_AddNewExam_Click(object sender, EventArgs e)
         {
-            AddNewExam _addNewExam = new AddNewExam();
+
+            ExamDisplay _addNewExam = new ExamDisplay(ViewType.Create);
             _addNewExam.ShowDialog();
         }
 

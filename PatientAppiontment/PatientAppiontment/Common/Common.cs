@@ -8,4 +8,11 @@ namespace PatientAppiontment.Common
     class Common
     {
     }
+
+    public enum ViewType
+    {
+        Initial = 0,
+        Create = 1,
+        Update = 2
+    }
 }

@@ -1,6 +1,6 @@
 ﻿namespace PatientAppiontment.View
 {
-    partial class AddNewExam
+    partial class ExamDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -131,7 +131,7 @@
             this.groupBox1.Size = new System.Drawing.Size(622, 611);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "新检查";
+            this.groupBox1.Text = "基本信息";
             // 
             // btn_Confrom
             // 
@@ -789,6 +789,23 @@
             // cmb_PatientFloor
             // 
             this.cmb_PatientFloor.FormattingEnabled = true;
+            this.cmb_PatientFloor.Items.AddRange(new object[] {
+            "5A",
+            "5B",
+            "6A",
+            "6B",
+            "7A",
+            "7B",
+            "8A",
+            "8B",
+            "9A",
+            "9B",
+            "10A",
+            "10B",
+            "11A",
+            "ICU",
+            "12A",
+            "12B"});
             this.cmb_PatientFloor.Location = new System.Drawing.Point(72, 69);
             this.cmb_PatientFloor.Name = "cmb_PatientFloor";
             this.cmb_PatientFloor.Size = new System.Drawing.Size(94, 20);
@@ -873,14 +890,15 @@
             this.txt_PatientName.Size = new System.Drawing.Size(94, 21);
             this.txt_PatientName.TabIndex = 0;
             // 
-            // AddNewExam
+            // ExamDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 630);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AddNewExam";
-            this.Text = "增加新的检查";
+            this.Name = "ExamDisplay";
+            this.Text = "检查项目";
+            this.Load += new System.EventHandler(this.ExamDisplay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
