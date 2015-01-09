@@ -49,6 +49,7 @@
     <Compile Include="Common\ICheckInput.cs" />
     <Compile Include="Common\PCID.cs" />
     <Compile Include="Common\Status.cs" />
+    <Compile Include="Control\CheckInput.cs" />
     <Compile Include="Control\DataPackage.cs" />
     <Compile Include="Control\Exam_Add.cs" />
     <Compile Include="Control\GetArchiveCode.cs" />

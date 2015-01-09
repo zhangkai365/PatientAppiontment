@@ -42,7 +42,7 @@ namespace PatientAppiontment.View
         {
             bool _CheckResultAllNecessary = false;
             //检查输入——患者姓名
-            checkInput_PatientName _CheckInput_PatientName = new checkInput_PatientName();
+            CheckInput_PatientName _CheckInput_PatientName = new CheckInput_PatientName();
             CheckResult _CheckResult_PatientName = _CheckInput_PatientName.Check(txt_PatientName.Text);
             if (_CheckResult_PatientName.Result == false)
             {
@@ -50,7 +50,7 @@ namespace PatientAppiontment.View
                 Tip_PatientName.Show(_CheckResult_PatientName.Tips,txt_PatientName,3000);
             }
             //检查输入——患者性别
-            checkInput_Sex _CheckInput_Sex = new checkInput_Sex();
+            CheckInput_Sex _CheckInput_Sex = new CheckInput_Sex();
             if (cmb_PatientSex.SelectedItem == null)
             {
                 ToolTip Tip_Sex = new ToolTip();

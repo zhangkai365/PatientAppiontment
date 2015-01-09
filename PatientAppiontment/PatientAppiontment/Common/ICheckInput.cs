@@ -6,11 +6,17 @@ using System.Text;
 namespace PatientAppiontment.Common
 {
 
-    public interface ICheckInput
+    public interface ICheckInput_string
     {
         /// <summary>
         /// 检查输入
         /// </summary>
-        CheckResult Check(string inputValue);
+        CheckResult Check(string inputString);
     }
+
+    public interface ICheckInput_int
+    {
+        CheckResult Check(int inputInt);
+    }
+
 }
