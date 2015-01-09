@@ -44,18 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CheckResult.cs" />
     <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\ICheckInput.cs" />
+    <Compile Include="Common\PCID.cs" />
     <Compile Include="Common\Status.cs" />
     <Compile Include="Control\DataPackage.cs" />
     <Compile Include="Control\Exam_Add.cs" />
+    <Compile Include="Control\GetArchiveCode.cs" />
     <Compile Include="Data\ConnectionString.cs" />
     <Compile Include="Data\DataBaseManagement.cs" />
-    <Compile Include="Data\DataSetPatientRecord.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetPatientRecord.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Data\mnTablePatientCheck.cs" />
+    <Compile Include="Data\PackageExam.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,17 +103,6 @@
     <EmbeddedResource Include="View\Form_DataBaseManagement.resx">
       <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Data\DataSetPatientRecord.xsc">
-      <DependentUpon>DataSetPatientRecord.xsd</DependentUpon>
-    </None>
-    <None Include="Data\DataSetPatientRecord.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetPatientRecord.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Data\DataSetPatientRecord.xss">
-      <DependentUpon>DataSetPatientRecord.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

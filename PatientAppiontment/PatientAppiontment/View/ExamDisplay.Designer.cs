@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lab_PatientArchiveCode = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.btn_Confrom = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -111,6 +113,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lab_PatientArchiveCode);
+            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.btn_Confrom);
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.cmb_PatientDoctor);
@@ -128,14 +132,32 @@
             this.groupBox1.Controls.Add(this.txt_PatientName);
             this.groupBox1.Location = new System.Drawing.Point(12, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(622, 611);
+            this.groupBox1.Size = new System.Drawing.Size(646, 631);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
             // 
+            // lab_PatientArchiveCode
+            // 
+            this.lab_PatientArchiveCode.AutoSize = true;
+            this.lab_PatientArchiveCode.Location = new System.Drawing.Point(89, 27);
+            this.lab_PatientArchiveCode.Name = "lab_PatientArchiveCode";
+            this.lab_PatientArchiveCode.Size = new System.Drawing.Size(11, 12);
+            this.lab_PatientArchiveCode.TabIndex = 16;
+            this.lab_PatientArchiveCode.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 27);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 12);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "患者序号：";
+            // 
             // btn_Confrom
             // 
-            this.btn_Confrom.Location = new System.Drawing.Point(542, 28);
+            this.btn_Confrom.Location = new System.Drawing.Point(540, 63);
             this.btn_Confrom.Name = "btn_Confrom";
             this.btn_Confrom.Size = new System.Drawing.Size(70, 61);
             this.btn_Confrom.TabIndex = 14;
@@ -148,10 +170,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(19, 115);
+            this.tabControl1.Location = new System.Drawing.Point(6, 150);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(597, 490);
+            this.tabControl1.Size = new System.Drawing.Size(625, 465);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPage1
@@ -161,7 +183,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(589, 464);
+            this.tabPage1.Size = new System.Drawing.Size(617, 439);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "超声检查";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -482,7 +504,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(589, 464);
+            this.tabPage2.Size = new System.Drawing.Size(617, 439);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "动态心电图、TCD、心功能";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -624,7 +646,7 @@
             this.tabPage3.Controls.Add(this.tableLayoutPanel3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(589, 464);
+            this.tabPage3.Size = new System.Drawing.Size(617, 439);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "骨密度、肺功能、脑电图";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -765,7 +787,7 @@
             // cmb_PatientDoctor
             // 
             this.cmb_PatientDoctor.FormattingEnabled = true;
-            this.cmb_PatientDoctor.Location = new System.Drawing.Point(430, 69);
+            this.cmb_PatientDoctor.Location = new System.Drawing.Point(428, 104);
             this.cmb_PatientDoctor.Name = "cmb_PatientDoctor";
             this.cmb_PatientDoctor.Size = new System.Drawing.Size(91, 20);
             this.cmb_PatientDoctor.TabIndex = 12;
@@ -773,7 +795,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(361, 69);
+            this.label7.Location = new System.Drawing.Point(359, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 11;
@@ -781,7 +803,7 @@
             // 
             // txt_PatientBedNum
             // 
-            this.txt_PatientBedNum.Location = new System.Drawing.Point(255, 69);
+            this.txt_PatientBedNum.Location = new System.Drawing.Point(253, 104);
             this.txt_PatientBedNum.Name = "txt_PatientBedNum";
             this.txt_PatientBedNum.Size = new System.Drawing.Size(73, 21);
             this.txt_PatientBedNum.TabIndex = 10;
@@ -806,7 +828,7 @@
             "ICU",
             "12A",
             "12B"});
-            this.cmb_PatientFloor.Location = new System.Drawing.Point(72, 69);
+            this.cmb_PatientFloor.Location = new System.Drawing.Point(70, 104);
             this.cmb_PatientFloor.Name = "cmb_PatientFloor";
             this.cmb_PatientFloor.Size = new System.Drawing.Size(94, 20);
             this.cmb_PatientFloor.TabIndex = 9;
@@ -814,7 +836,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(193, 69);
+            this.label6.Location = new System.Drawing.Point(191, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 8;
@@ -823,7 +845,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 69);
+            this.label5.Location = new System.Drawing.Point(15, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 7;
@@ -832,7 +854,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(504, 31);
+            this.label4.Location = new System.Drawing.Point(502, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 12);
             this.label4.TabIndex = 6;
@@ -844,7 +866,7 @@
             this.cmb_PatientSex.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.cmb_PatientSex.Location = new System.Drawing.Point(255, 28);
+            this.cmb_PatientSex.Location = new System.Drawing.Point(253, 63);
             this.cmb_PatientSex.Name = "cmb_PatientSex";
             this.cmb_PatientSex.Size = new System.Drawing.Size(73, 20);
             this.cmb_PatientSex.TabIndex = 5;
@@ -852,7 +874,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(361, 28);
+            this.label3.Location = new System.Drawing.Point(359, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 4;
@@ -860,7 +882,7 @@
             // 
             // txt_PatientAge
             // 
-            this.txt_PatientAge.Location = new System.Drawing.Point(417, 28);
+            this.txt_PatientAge.Location = new System.Drawing.Point(415, 63);
             this.txt_PatientAge.Name = "txt_PatientAge";
             this.txt_PatientAge.Size = new System.Drawing.Size(81, 21);
             this.txt_PatientAge.TabIndex = 3;
@@ -868,7 +890,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(193, 28);
+            this.label2.Location = new System.Drawing.Point(191, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 2;
@@ -877,7 +899,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 28);
+            this.label1.Location = new System.Drawing.Point(15, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 1;
@@ -885,7 +907,7 @@
             // 
             // txt_PatientName
             // 
-            this.txt_PatientName.Location = new System.Drawing.Point(72, 28);
+            this.txt_PatientName.Location = new System.Drawing.Point(70, 63);
             this.txt_PatientName.Name = "txt_PatientName";
             this.txt_PatientName.Size = new System.Drawing.Size(94, 21);
             this.txt_PatientName.TabIndex = 0;
@@ -894,9 +916,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 630);
+            this.ClientSize = new System.Drawing.Size(670, 651);
             this.Controls.Add(this.groupBox1);
             this.Name = "ExamDisplay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "检查项目";
             this.Load += new System.EventHandler(this.ExamDisplay_Load);
             this.groupBox1.ResumeLayout(false);
@@ -988,5 +1011,7 @@
         private System.Windows.Forms.DateTimePicker dtp_PulFuc_Diffusion;
         private System.Windows.Forms.DateTimePicker dtp_BMD;
         private System.Windows.Forms.DateTimePicker dtp_EEG;
+        private System.Windows.Forms.Label lab_PatientArchiveCode;
+        private System.Windows.Forms.Label label17;
     }
 }

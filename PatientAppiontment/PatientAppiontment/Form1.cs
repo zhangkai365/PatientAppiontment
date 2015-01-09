@@ -85,16 +85,6 @@ namespace PatientAppiontment
         {
         }
 
-        public void ReadPatient()
-        {
-            DateTime viewDate = new DateTime();
-            viewDate = dateTimePicker1.Value.Date;
-            DataSetPatientRecord _dataSetPatientRecord = new DataSetPatientRecord();
-            SqlDataAdapter _dataAdapterArchiveCode = new SqlDataAdapter("Select [ArchiveCode] FROM [PatientCheck] WHERE [BookinDate]='"+ viewDate + "'", AppConnection.UltraSoundDataBaseConnectionString);
-            _dataAdapterArchiveCode.Fill(_dataSetPatientRecord);
-            DataView myDataView = new DataView(_dataSetPatientRecord.PatientCheck);
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             ReadPatientCheck();
