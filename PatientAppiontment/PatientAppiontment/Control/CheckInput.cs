@@ -90,13 +90,21 @@ namespace PatientAppiontment.Control
     /// </summary>
     public class CheckInput_Age : ICheckInput_int
     {
-        public CheckResult Check(string inputInt)
+        public CheckResult Check(int inputInt)
         {
             CheckResult _checkResult_Age = new CheckResult() {
                 Result = false,
                 Tips = "Initial", 
                 Necessary = true };
-
+            if (inputInt <= 0 || inputInt >= 120)
+            {
+                _checkResult_Age.Tips = "年龄输入错误！年龄在0-120岁之间。";
+            }
+            if (inputInt > 0 && inputInt < 120)
+            {
+                _checkResult_Age.Result = true;
+                _checkResult_Age.Tips = "Correct Age.";
+            }
             return _checkResult_Age;
         }
     }
