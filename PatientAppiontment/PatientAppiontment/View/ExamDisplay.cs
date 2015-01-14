@@ -35,6 +35,10 @@ namespace PatientAppiontment.View
             if (isAllChecked())
             {
                 MessageBox.Show("写入数据库！");
+                Exam_Add exam_Add = new Exam_Add();
+                //将数据写入数据库
+                Status result_ExamAdd = exam_Add.AddToDatabase(_packageExam);
+                MessageBox.Show("SnappetCodeName:" + result_ExamAdd.codeSnippetName + "\n" + "Result:" + result_ExamAdd.result.ToString() + "\n" + "Message:" + result_ExamAdd.message + "\n" + result_ExamAdd.index);
             }
         }
 
@@ -45,7 +49,8 @@ namespace PatientAppiontment.View
         public bool CheckInput()
         {
             bool _CheckResultAllNecessary = false;
-
+            //检查患者编号,目前无检查规则
+            _packageExam.Checked_ArchiveCode = true;
             //检查输入——患者姓名
             CheckInput_PatientName _CheckInput_PatientName = new CheckInput_PatientName();
             CheckResult _CheckResult_PatientName = _CheckInput_PatientName.Check(txt_PatientName.Text);
@@ -120,14 +125,28 @@ namespace PatientAppiontment.View
                 //年龄类型
                 _packageExam.AgeSymbol = "岁";
                 _packageExam.Checked_AgeSymbol = true;
-                //楼层
-                _packageExam.PatientFloor = cmb_PatientFloor.SelectedItem.ToString();
+                //楼层,注意使用combox时要注意里面可能什么都没有选择
+                if (cmb_PatientFloor.SelectedItem != null)
+                {
+                    _packageExam.PatientFloor = cmb_PatientFloor.SelectedItem.ToString();
+                }
+                if (cmb_PatientFloor.SelectedItem == null)
+                {
+                    _packageExam.PatientFloor = "";
+                }
                 _packageExam.Checked_PatientFloor = true;
                 //床号
                 _packageExam.PatientBedNum = txt_PatientBedNum.Text;
                 _packageExam.Checked_PatientBedNum = true;
-                //送诊医师
-                _packageExam.PatientDoctor = cmb_PatientDoctor.SelectedItem.ToString();
+                //送诊医师，注意使用combox时要注意里面可能什么都没有选择
+                if (cmb_PatientDoctor.SelectedItem != null)
+                {
+                    _packageExam.PatientDoctor = cmb_PatientDoctor.SelectedItem.ToString();
+                }
+                if (cmb_PatientDoctor.SelectedItem == null)
+                {
+                    _packageExam.PatientDoctor = "";
+                }
                 _packageExam.Checked_PatientDoctor = true;
             }
 

@@ -27,7 +27,7 @@ namespace PatientAppiontment.Control
             string _pcid = PCID._index.ToString();
             string _today_string = DateTime.Now.Date.ToString("yyyyMMdd");
             _archiveCode = _pcid + _today_string + "0001";
-            SqlConnection mnSqlConnection = new SqlConnection(AppConnection.AppiontmentDataBaseConnectionString);
+            SqlConnection mnSqlConnection = new SqlConnection(AppConnection.UltraSoundDataBaseConnectionString);
             try
             {
                 mnSqlConnection.Open();
