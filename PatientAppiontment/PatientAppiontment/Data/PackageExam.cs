@@ -8,6 +8,20 @@ using PatientAppiontment.Common;
 
 namespace PatientAppiontment.Data
 {
+    public class ExamItem
+    {
+        public bool hasChecked;
+        public DateTime ReservDate;
+        public bool hasModifyed;
+
+        public ExamItem()
+        {
+            hasChecked = false;
+            ReservDate = new DateTime(2015, 1, 1);
+            hasModifyed = false;
+        }
+    }
+
     public class PackageExam
     {
         //编号
@@ -34,8 +48,29 @@ namespace PatientAppiontment.Data
         //送诊医师
         public string PatientDoctor;
         public bool Checked_PatientDoctor;
-
+        //预约患者资料建立时间
         DateTime FoundDate;
+        //
+        public ExamItem Abdominal;
+        public ExamItem Heart;
+        public ExamItem CervicalVascular;
+        public ExamItem Thyroid;
+        public ExamItem LowerExeremityArtery;
+        public ExamItem LowerExeremityVein;
+        public ExamItem ThoracicCavity;
+        public ExamItem Urinary;
+        public ExamItem ResidualUrine;
+        public ExamItem LymphNode;
+        public ExamItem Others;
+        public ExamItem Holter;
+        public ExamItem TCD;
+        public ExamItem HeartFunction;
+        public ExamItem Arteriosclerosis;
+        public ExamItem PulFuc_Respiratory;
+        public ExamItem PulFuc_Diffusion;
+        public ExamItem BMD;
+        public ExamItem EEG;
+
         //默认的构造函数
         //全部赋值为阴性值
         public PackageExam()

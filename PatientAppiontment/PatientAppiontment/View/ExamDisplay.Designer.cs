@@ -270,6 +270,7 @@
             this.chk_Abdominal.TabIndex = 3;
             this.chk_Abdominal.Text = "腹部";
             this.chk_Abdominal.UseVisualStyleBackColor = true;
+            this.chk_Abdominal.CheckedChanged += new System.EventHandler(this.chk_Abdominal_CheckedChanged);
             // 
             // chk_Heart
             // 

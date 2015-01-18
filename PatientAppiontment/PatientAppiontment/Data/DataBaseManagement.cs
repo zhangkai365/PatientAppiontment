@@ -133,7 +133,7 @@ namespace PatientAppiontment.Data
             {
                 //may occure error
                 mnSqlConnection.Open();
-                string cmdText2 = @"CREATE TABLE PatientRecords(ArchiveCode varchar(50) NOT NULL, PatientName varchar(50), Sex varchar(50), Age int, AgeSymbol varchar(50), FoundDate datetime)";
+                string cmdText2 = @"CREATE TABLE PatientRecords(ArchiveCode varchar(50) NOT NULL, PatientName varchar(50), Sex varchar(50), Age int, AgeSymbol varchar(50), FoundDate datetime, States carchar(50))";
                 SqlCommand cmd = new SqlCommand(cmdText2, mnSqlConnection);
                 //may occure error
                 cmd.ExecuteNonQuery();

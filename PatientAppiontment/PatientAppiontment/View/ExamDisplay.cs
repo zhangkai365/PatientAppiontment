@@ -34,11 +34,18 @@ namespace PatientAppiontment.View
             CheckInput();
             if (isAllChecked())
             {
-                MessageBox.Show("写入数据库！");
                 Exam_Add exam_Add = new Exam_Add();
                 //将数据写入数据库
                 Status result_ExamAdd = exam_Add.AddToDatabase(_packageExam);
-                MessageBox.Show("SnappetCodeName:" + result_ExamAdd.codeSnippetName + "\n" + "Result:" + result_ExamAdd.result.ToString() + "\n" + "Message:" + result_ExamAdd.message + "\n" + result_ExamAdd.index);
+                if (result_ExamAdd.result == Result.Success)
+                {
+                    MessageBox.Show("成功将患者信息写入数据库！");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("SnappetCodeName:" + result_ExamAdd.codeSnippetName + "\n" + "Result:" + result_ExamAdd.result.ToString() + "\n" + "Message:" + result_ExamAdd.message + "\n" + result_ExamAdd.index);
+                }
             }
         }
 
@@ -208,7 +215,19 @@ namespace PatientAppiontment.View
         public void AddNewExamInitialize()
         {
             GetArchiveCode mnGetArchiveCode = new GetArchiveCode();
-            lab_PatientArchiveCode.Text = mnGetArchiveCode.Get();  
+            string _ExamArchiveCode = "";
+            Status _Result_GetArchiveCode = mnGetArchiveCode.Get(out _ExamArchiveCode);
+            //成功获取患者编号
+            if (_Result_GetArchiveCode.result == Result.Success)
+            {
+                lab_PatientArchiveCode.Text = _ExamArchiveCode;
+                _packageExam.ArchiveCode = _ExamArchiveCode;
+            }
+            if (_Result_GetArchiveCode.result != Result.Success)
+            {
+                MessageBox.Show("获取患者编号出现问题!\n" + _Result_GetArchiveCode.codeSnippetName + "\n" + _Result_GetArchiveCode.result.ToString() + "\n" + _Result_GetArchiveCode.message + "\n" + _Result_GetArchiveCode.index);
+                this.Close();
+            }
         }
         /// <summary>
         /// 以修改记录模式初始化窗体
@@ -216,6 +235,11 @@ namespace PatientAppiontment.View
         public void ModifyExamInitialize()
         {
  
+        }
+
+        private void chk_Abdominal_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Abdominal.hasChecked = chk_Abdominal.Checked;
         }
 
     }
