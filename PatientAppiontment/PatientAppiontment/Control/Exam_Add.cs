@@ -64,6 +64,9 @@ namespace PatientAppiontment.Control
                 SqlTransaction_Appiontment = AppiontmentConnection.BeginTransaction();
                 cmd_Appiontment.Transaction = SqlTransaction_Appiontment;
                 ResultLineNum_Appiontment = cmd_Appiontment.ExecuteNonQuery();
+
+                //写入其他预约数据
+
                 //写入成功
                 if (ResultLineNum_Ultrasound == 1 && ResultLineNum_Appiontment == 1)
                 {
@@ -115,5 +118,64 @@ namespace PatientAppiontment.Control
             }
             return result_AddToDataBase;
         }
+
+        public Status AddExamToDatabase(PackageExam packageExam)
+        {
+            //方法运行状态初始化
+            Status reslut = new Status() { 
+                codeSnippetName = "Control>>Exam_Add>>AddExamToDatabase",
+                result = Result.Initial,
+                message = "Initial",
+                index = "Control.EA.AETD.009" };
+            SqlConnection UltrasoundConnection = new SqlConnection(AppConnection.UltraSoundDataBaseConnectionString);
+            SqlConnection AppiontmentConnection = new SqlConnection(AppConnection.AppiontmentDataBaseConnectionString);
+
+            string cmdAdd = "Insert Into [PatientChecks]" + 
+                "(ArchiveCode,CheckCode,ReDiagnosisTimes,DiagnosisDevice,Origin," + 
+                "CheckPart,CheckPrice,HospitalizedNum,SickbedNum,ClinicalOffice," +
+                "BookinDoctor,CheckDoctor,ClinicalDiagnosis,PatientDictation,Findings,"+
+                "Prompt,BookinDate,CheckDate,PositiveSymbol,ExportSymbol,"+
+                "Remark,ListNum,DictationName,ReportName,States,"+
+                "Clinicians,Appiontment,ReservationNum,Priority,RoomName,"+
+                "groups,ordering,Free,PatientGroup,Code,"+
+                "disease,Category,tipsofabstract,diagnosis,PatientPriority)"+
+                " Values (@ArchiveCode,@CheckCode,@ReDiagnosisTimes,@DiagnosisDevice,@Origin,"+
+                "@CheckPart,@CheckPrice,@HospitalizedNum,@SickbedNum,"+
+                "@ClinicalOffice,@BookinDoctor,@CheckDoctor,@ClinicalDiagnosis,@PatientDictation,"+
+                "@Report,@PrintSymbol,@ExportSymbol,@Remark,@ListNum,"+
+                "@DictationName,@ReportName,@States,@Clinicans,@Appiontment,"+
+                "@Reservationnum,@Priority,@RoomName,@groups,@Ordering," +
+                "@Free,@PatientGroup,@Code,@disease,@Category,"+
+                "@tipsofabstract,@diagnosis,@PatientPriority"+
+                ")";
+            SqlCommand cmdSql = new SqlCommand(cmdAdd, UltrasoundConnection);
+            //填充参数集合
+            //患者序号
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@ArchiveCode";
+            param.Value = "";
+            param.SqlDbType = System.Data.SqlDbType.VarChar;
+            param.Size = 50;
+            cmdSql.Parameters.Add(param);
+            //
+            param = new SqlParameter();
+            param.ParameterName = "@CheckCode";
+            param.Value = "";
+            param.SqlDbType = System.Data.SqlDbType.VarChar;
+            param.Size = 50;
+            cmdSql.Parameters.Add(param);
+            //
+            param = new SqlParameter();
+            param.ParameterName = "@RediagnosisTimes";
+            param.Value = 1;
+            param.SqlDbType = System.Data.SqlDbType.Int;
+            cmdSql.Parameters.Add(param);
+            //
+
+
+            //返回方法运行结果
+            return reslut;
+        }
+
     }
 }

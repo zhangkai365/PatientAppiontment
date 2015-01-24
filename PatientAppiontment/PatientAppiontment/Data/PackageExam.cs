@@ -60,6 +60,7 @@ namespace PatientAppiontment.Data
         public ExamItem ThoracicCavity;
         public ExamItem Urinary;
         public ExamItem ResidualUrine;
+        public ExamItem RenalArtery;
         public ExamItem LymphNode;
         public ExamItem Others;
         public ExamItem Holter;

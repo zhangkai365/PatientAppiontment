@@ -70,7 +70,7 @@
             this.chk_Holter = new System.Windows.Forms.CheckBox();
             this.chk_TCD = new System.Windows.Forms.CheckBox();
             this.chk_HeartFunction = new System.Windows.Forms.CheckBox();
-            this.chk = new System.Windows.Forms.CheckBox();
+            this.chk_Arteriosclerosis = new System.Windows.Forms.CheckBox();
             this.dtp_Holter = new System.Windows.Forms.DateTimePicker();
             this.dtp_TCD = new System.Windows.Forms.DateTimePicker();
             this.dtp_HeartFunction = new System.Windows.Forms.DateTimePicker();
@@ -281,6 +281,7 @@
             this.chk_Heart.TabIndex = 4;
             this.chk_Heart.Text = "心脏";
             this.chk_Heart.UseVisualStyleBackColor = true;
+            this.chk_Heart.CheckedChanged += new System.EventHandler(this.chk_Heart_CheckedChanged);
             // 
             // chk_CervicalVascular
             // 
@@ -291,6 +292,7 @@
             this.chk_CervicalVascular.TabIndex = 5;
             this.chk_CervicalVascular.Text = "颈部血管";
             this.chk_CervicalVascular.UseVisualStyleBackColor = true;
+            this.chk_CervicalVascular.CheckedChanged += new System.EventHandler(this.chk_CervicalVascular_CheckedChanged);
             // 
             // chk_Thyroid
             // 
@@ -301,6 +303,7 @@
             this.chk_Thyroid.TabIndex = 6;
             this.chk_Thyroid.Text = "甲状腺";
             this.chk_Thyroid.UseVisualStyleBackColor = true;
+            this.chk_Thyroid.CheckedChanged += new System.EventHandler(this.chk_Thyroid_CheckedChanged);
             // 
             // chk_LowerExtremityArtery
             // 
@@ -311,6 +314,7 @@
             this.chk_LowerExtremityArtery.TabIndex = 7;
             this.chk_LowerExtremityArtery.Text = "下肢动脉";
             this.chk_LowerExtremityArtery.UseVisualStyleBackColor = true;
+            this.chk_LowerExtremityArtery.CheckedChanged += new System.EventHandler(this.chk_LowerExtremityArtery_CheckedChanged);
             // 
             // chk_LowerExtremityVein
             // 
@@ -321,6 +325,7 @@
             this.chk_LowerExtremityVein.TabIndex = 8;
             this.chk_LowerExtremityVein.Text = "下肢静脉";
             this.chk_LowerExtremityVein.UseVisualStyleBackColor = true;
+            this.chk_LowerExtremityVein.CheckedChanged += new System.EventHandler(this.chk_LowerExtremityVein_CheckedChanged);
             // 
             // chk_ThoracicCavity
             // 
@@ -331,6 +336,7 @@
             this.chk_ThoracicCavity.TabIndex = 9;
             this.chk_ThoracicCavity.Text = "胸腔";
             this.chk_ThoracicCavity.UseVisualStyleBackColor = true;
+            this.chk_ThoracicCavity.CheckedChanged += new System.EventHandler(this.chk_ThoracicCavity_CheckedChanged);
             // 
             // chk_Urinary
             // 
@@ -341,6 +347,7 @@
             this.chk_Urinary.TabIndex = 10;
             this.chk_Urinary.Text = "泌尿系";
             this.chk_Urinary.UseVisualStyleBackColor = true;
+            this.chk_Urinary.CheckedChanged += new System.EventHandler(this.chk_Urinary_CheckedChanged);
             // 
             // chk_ResidualUrine
             // 
@@ -351,6 +358,7 @@
             this.chk_ResidualUrine.TabIndex = 11;
             this.chk_ResidualUrine.Text = "残余尿";
             this.chk_ResidualUrine.UseVisualStyleBackColor = true;
+            this.chk_ResidualUrine.CheckedChanged += new System.EventHandler(this.chk_ResidualUrine_CheckedChanged);
             // 
             // chk_RenalArtery
             // 
@@ -361,6 +369,7 @@
             this.chk_RenalArtery.TabIndex = 12;
             this.chk_RenalArtery.Text = "肾动脉";
             this.chk_RenalArtery.UseVisualStyleBackColor = true;
+            this.chk_RenalArtery.CheckedChanged += new System.EventHandler(this.chk_RenalArtery_CheckedChanged);
             // 
             // chk_LymphNode
             // 
@@ -371,6 +380,7 @@
             this.chk_LymphNode.TabIndex = 13;
             this.chk_LymphNode.Text = "浅表淋巴结";
             this.chk_LymphNode.UseVisualStyleBackColor = true;
+            this.chk_LymphNode.CheckedChanged += new System.EventHandler(this.chk_LymphNode_CheckedChanged);
             // 
             // chk_Others
             // 
@@ -381,6 +391,7 @@
             this.chk_Others.TabIndex = 14;
             this.chk_Others.Text = "其他：";
             this.chk_Others.UseVisualStyleBackColor = true;
+            this.chk_Others.CheckedChanged += new System.EventHandler(this.chk_Others_CheckedChanged);
             // 
             // dtp_Abdominal
             // 
@@ -522,7 +533,7 @@
             this.tableLayoutPanel2.Controls.Add(this.chk_Holter, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.chk_TCD, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.chk_HeartFunction, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.chk, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.chk_Arteriosclerosis, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.dtp_Holter, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.dtp_TCD, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.dtp_HeartFunction, 1, 3);
@@ -575,6 +586,7 @@
             this.chk_Holter.TabIndex = 3;
             this.chk_Holter.Text = "动态心电图";
             this.chk_Holter.UseVisualStyleBackColor = true;
+            this.chk_Holter.CheckedChanged += new System.EventHandler(this.chk_Holter_CheckedChanged);
             // 
             // chk_TCD
             // 
@@ -585,6 +597,7 @@
             this.chk_TCD.TabIndex = 4;
             this.chk_TCD.Text = "经颅多普勒";
             this.chk_TCD.UseVisualStyleBackColor = true;
+            this.chk_TCD.CheckedChanged += new System.EventHandler(this.chk_TCD_CheckedChanged);
             // 
             // chk_HeartFunction
             // 
@@ -595,16 +608,18 @@
             this.chk_HeartFunction.TabIndex = 5;
             this.chk_HeartFunction.Text = "心功能";
             this.chk_HeartFunction.UseVisualStyleBackColor = true;
+            this.chk_HeartFunction.CheckedChanged += new System.EventHandler(this.chk_HeartFunction_CheckedChanged);
             // 
-            // chk
+            // chk_Arteriosclerosis
             // 
-            this.chk.AutoSize = true;
-            this.chk.Location = new System.Drawing.Point(3, 133);
-            this.chk.Name = "chk";
-            this.chk.Size = new System.Drawing.Size(72, 16);
-            this.chk.TabIndex = 6;
-            this.chk.Text = "动脉硬化";
-            this.chk.UseVisualStyleBackColor = true;
+            this.chk_Arteriosclerosis.AutoSize = true;
+            this.chk_Arteriosclerosis.Location = new System.Drawing.Point(3, 133);
+            this.chk_Arteriosclerosis.Name = "chk_Arteriosclerosis";
+            this.chk_Arteriosclerosis.Size = new System.Drawing.Size(72, 16);
+            this.chk_Arteriosclerosis.TabIndex = 6;
+            this.chk_Arteriosclerosis.Text = "动脉硬化";
+            this.chk_Arteriosclerosis.UseVisualStyleBackColor = true;
+            this.chk_Arteriosclerosis.CheckedChanged += new System.EventHandler(this.chk_Arteriosclerosis_CheckedChanged);
             // 
             // dtp_Holter
             // 
@@ -718,6 +733,7 @@
             this.chk_PulFuc_Respiratory.TabIndex = 3;
             this.chk_PulFuc_Respiratory.Text = "肺功能：通气功能";
             this.chk_PulFuc_Respiratory.UseVisualStyleBackColor = true;
+            this.chk_PulFuc_Respiratory.CheckedChanged += new System.EventHandler(this.chk_PulFuc_Respiratory_CheckedChanged);
             // 
             // chk_PulFuc_Diffusion
             // 
@@ -728,6 +744,7 @@
             this.chk_PulFuc_Diffusion.TabIndex = 4;
             this.chk_PulFuc_Diffusion.Text = "肺功能：弥散功能";
             this.chk_PulFuc_Diffusion.UseVisualStyleBackColor = true;
+            this.chk_PulFuc_Diffusion.CheckedChanged += new System.EventHandler(this.chk_PulFuc_Diffusion_CheckedChanged);
             // 
             // chk_BMD
             // 
@@ -738,6 +755,7 @@
             this.chk_BMD.TabIndex = 5;
             this.chk_BMD.Text = "骨密度";
             this.chk_BMD.UseVisualStyleBackColor = true;
+            this.chk_BMD.CheckedChanged += new System.EventHandler(this.chk_BMD_CheckedChanged);
             // 
             // chk_EEG
             // 
@@ -748,6 +766,7 @@
             this.chk_EEG.TabIndex = 6;
             this.chk_EEG.Text = "脑电图";
             this.chk_EEG.UseVisualStyleBackColor = true;
+            this.chk_EEG.CheckedChanged += new System.EventHandler(this.chk_EEG_CheckedChanged);
             // 
             // dtp_PulFuc_Respiratory
             // 
@@ -995,7 +1014,7 @@
         private System.Windows.Forms.CheckBox chk_Holter;
         private System.Windows.Forms.CheckBox chk_TCD;
         private System.Windows.Forms.CheckBox chk_HeartFunction;
-        private System.Windows.Forms.CheckBox chk;
+        private System.Windows.Forms.CheckBox chk_Arteriosclerosis;
         private System.Windows.Forms.DateTimePicker dtp_Holter;
         private System.Windows.Forms.DateTimePicker dtp_TCD;
         private System.Windows.Forms.DateTimePicker dtp_HeartFunction;

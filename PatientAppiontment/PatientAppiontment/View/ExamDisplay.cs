@@ -49,6 +49,8 @@ namespace PatientAppiontment.View
             }
         }
 
+
+
         /// <summary>
         /// 检查输入
         /// </summary>
@@ -237,9 +239,107 @@ namespace PatientAppiontment.View
  
         }
 
+        
+        //界面上的相应项目选择框被选中后，相应的窗体的 PackageExam项目的选中值要被更改
+
         private void chk_Abdominal_CheckedChanged(object sender, EventArgs e)
         {
             _packageExam.Abdominal.hasChecked = chk_Abdominal.Checked;
+        }
+
+        private void chk_Heart_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Heart.hasChecked = chk_Heart.Checked;
+        }
+
+        private void chk_CervicalVascular_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.CervicalVascular.hasChecked = chk_CervicalVascular.Checked;
+        }
+
+        private void chk_Thyroid_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Thyroid.hasChecked = chk_Thyroid.Checked;
+        }
+
+        private void chk_LowerExtremityArtery_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.LowerExeremityArtery.hasChecked = chk_LowerExtremityArtery.Checked;
+        }
+
+        private void chk_LowerExtremityVein_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.LowerExeremityVein.hasChecked = chk_LowerExtremityVein.Checked;
+        }
+
+        private void chk_ThoracicCavity_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.ThoracicCavity.hasChecked = chk_ThoracicCavity.Checked;
+        }
+
+        private void chk_Urinary_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Urinary.hasChecked = chk_Urinary.Checked;
+        }
+
+        private void chk_ResidualUrine_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.ResidualUrine.hasChecked = chk_ResidualUrine.Checked;
+        }
+
+        private void chk_RenalArtery_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.RenalArtery.hasChecked = chk_RenalArtery.Checked;
+        }
+
+        private void chk_LymphNode_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.LymphNode.hasChecked = chk_LymphNode.Checked;
+        }
+
+        private void chk_Others_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Others.hasChecked = chk_Others.Checked;
+        }
+
+        private void chk_Holter_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Holter.hasChecked = chk_Holter.Checked;
+        }
+
+        private void chk_TCD_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.TCD.hasChecked = chk_TCD.Checked;
+        }
+
+        private void chk_HeartFunction_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.HeartFunction.hasChecked = chk_HeartFunction.Checked;
+        }
+
+        private void chk_PulFuc_Respiratory_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.PulFuc_Respiratory.hasChecked = chk_PulFuc_Respiratory.Checked;
+        }
+
+        private void chk_PulFuc_Diffusion_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.PulFuc_Diffusion.hasChecked = chk_PulFuc_Diffusion.Checked;
+        }
+
+        private void chk_BMD_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.BMD.hasChecked = chk_BMD.Checked;
+        }
+
+        private void chk_EEG_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.EEG.hasChecked = chk_EEG.Checked;
+        }
+
+        private void chk_Arteriosclerosis_CheckedChanged(object sender, EventArgs e)
+        {
+            _packageExam.Arteriosclerosis.hasChecked = chk_Arteriosclerosis.Checked;
         }
 
     }
