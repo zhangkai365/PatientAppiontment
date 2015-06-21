@@ -32,62 +32,6 @@
             this.lab_PatientArchiveCode = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_Confrom = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.chk_Abdominal = new System.Windows.Forms.CheckBox();
-            this.chk_Heart = new System.Windows.Forms.CheckBox();
-            this.chk_CervicalVascular = new System.Windows.Forms.CheckBox();
-            this.chk_Thyroid = new System.Windows.Forms.CheckBox();
-            this.chk_LowerExtremityArtery = new System.Windows.Forms.CheckBox();
-            this.chk_LowerExtremityVein = new System.Windows.Forms.CheckBox();
-            this.chk_ThoracicCavity = new System.Windows.Forms.CheckBox();
-            this.chk_Urinary = new System.Windows.Forms.CheckBox();
-            this.chk_ResidualUrine = new System.Windows.Forms.CheckBox();
-            this.chk_RenalArtery = new System.Windows.Forms.CheckBox();
-            this.chk_LymphNode = new System.Windows.Forms.CheckBox();
-            this.chk_Others = new System.Windows.Forms.CheckBox();
-            this.dtp_Abdominal = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Heart = new System.Windows.Forms.DateTimePicker();
-            this.dtp_CervicalVascular = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Thyroid = new System.Windows.Forms.DateTimePicker();
-            this.dtp_LowerExtremityArtery = new System.Windows.Forms.DateTimePicker();
-            this.dtp_LowerExtremityVein = new System.Windows.Forms.DateTimePicker();
-            this.dtp_ThoracicCavity = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Urinary = new System.Windows.Forms.DateTimePicker();
-            this.dtp_ResidualUrine = new System.Windows.Forms.DateTimePicker();
-            this.dtp_RenalArtery = new System.Windows.Forms.DateTimePicker();
-            this.dtp_LymphNode = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Others = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.chk_Holter = new System.Windows.Forms.CheckBox();
-            this.chk_TCD = new System.Windows.Forms.CheckBox();
-            this.chk_HeartFunction = new System.Windows.Forms.CheckBox();
-            this.chk_Arteriosclerosis = new System.Windows.Forms.CheckBox();
-            this.dtp_Holter = new System.Windows.Forms.DateTimePicker();
-            this.dtp_TCD = new System.Windows.Forms.DateTimePicker();
-            this.dtp_HeartFunction = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.chk_PulFuc_Respiratory = new System.Windows.Forms.CheckBox();
-            this.chk_PulFuc_Diffusion = new System.Windows.Forms.CheckBox();
-            this.chk_BMD = new System.Windows.Forms.CheckBox();
-            this.chk_EEG = new System.Windows.Forms.CheckBox();
-            this.dtp_PulFuc_Respiratory = new System.Windows.Forms.DateTimePicker();
-            this.dtp_PulFuc_Diffusion = new System.Windows.Forms.DateTimePicker();
-            this.dtp_BMD = new System.Windows.Forms.DateTimePicker();
-            this.dtp_EEG = new System.Windows.Forms.DateTimePicker();
             this.cmb_PatientDoctor = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_PatientBedNum = new System.Windows.Forms.TextBox();
@@ -101,14 +45,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_PatientName = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -116,7 +57,6 @@
             this.groupBox1.Controls.Add(this.lab_PatientArchiveCode);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.btn_Confrom);
-            this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.cmb_PatientDoctor);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txt_PatientBedNum);
@@ -132,7 +72,7 @@
             this.groupBox1.Controls.Add(this.txt_PatientName);
             this.groupBox1.Location = new System.Drawing.Point(12, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(646, 631);
+            this.groupBox1.Size = new System.Drawing.Size(646, 136);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
@@ -164,645 +104,6 @@
             this.btn_Confrom.Text = "确定";
             this.btn_Confrom.UseVisualStyleBackColor = true;
             this.btn_Confrom.Click += new System.EventHandler(this.btn_Confrom_Click);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(6, 150);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(625, 465);
-            this.tabControl1.TabIndex = 13;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(617, 439);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "超声检查";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chk_Abdominal, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.chk_Heart, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.chk_CervicalVascular, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.chk_Thyroid, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.chk_LowerExtremityArtery, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.chk_LowerExtremityVein, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ThoracicCavity, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.chk_Urinary, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ResidualUrine, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.chk_RenalArtery, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.chk_LymphNode, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.chk_Others, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_Abdominal, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_Heart, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_CervicalVascular, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_Thyroid, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_LowerExtremityArtery, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_LowerExtremityVein, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_ThoracicCavity, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_Urinary, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_ResidualUrine, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_RenalArtery, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_LymphNode, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.dtp_Others, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 18);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 14;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(550, 400);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 19);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "检查项目";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(168, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(180, 19);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "预约检查时间和日期";
-            // 
-            // chk_Abdominal
-            // 
-            this.chk_Abdominal.AutoSize = true;
-            this.chk_Abdominal.Location = new System.Drawing.Point(3, 43);
-            this.chk_Abdominal.Name = "chk_Abdominal";
-            this.chk_Abdominal.Size = new System.Drawing.Size(48, 16);
-            this.chk_Abdominal.TabIndex = 3;
-            this.chk_Abdominal.Text = "腹部";
-            this.chk_Abdominal.UseVisualStyleBackColor = true;
-            this.chk_Abdominal.CheckedChanged += new System.EventHandler(this.chk_Abdominal_CheckedChanged);
-            // 
-            // chk_Heart
-            // 
-            this.chk_Heart.AutoSize = true;
-            this.chk_Heart.Location = new System.Drawing.Point(3, 73);
-            this.chk_Heart.Name = "chk_Heart";
-            this.chk_Heart.Size = new System.Drawing.Size(48, 16);
-            this.chk_Heart.TabIndex = 4;
-            this.chk_Heart.Text = "心脏";
-            this.chk_Heart.UseVisualStyleBackColor = true;
-            this.chk_Heart.CheckedChanged += new System.EventHandler(this.chk_Heart_CheckedChanged);
-            // 
-            // chk_CervicalVascular
-            // 
-            this.chk_CervicalVascular.AutoSize = true;
-            this.chk_CervicalVascular.Location = new System.Drawing.Point(3, 103);
-            this.chk_CervicalVascular.Name = "chk_CervicalVascular";
-            this.chk_CervicalVascular.Size = new System.Drawing.Size(72, 16);
-            this.chk_CervicalVascular.TabIndex = 5;
-            this.chk_CervicalVascular.Text = "颈部血管";
-            this.chk_CervicalVascular.UseVisualStyleBackColor = true;
-            this.chk_CervicalVascular.CheckedChanged += new System.EventHandler(this.chk_CervicalVascular_CheckedChanged);
-            // 
-            // chk_Thyroid
-            // 
-            this.chk_Thyroid.AutoSize = true;
-            this.chk_Thyroid.Location = new System.Drawing.Point(3, 133);
-            this.chk_Thyroid.Name = "chk_Thyroid";
-            this.chk_Thyroid.Size = new System.Drawing.Size(60, 16);
-            this.chk_Thyroid.TabIndex = 6;
-            this.chk_Thyroid.Text = "甲状腺";
-            this.chk_Thyroid.UseVisualStyleBackColor = true;
-            this.chk_Thyroid.CheckedChanged += new System.EventHandler(this.chk_Thyroid_CheckedChanged);
-            // 
-            // chk_LowerExtremityArtery
-            // 
-            this.chk_LowerExtremityArtery.AutoSize = true;
-            this.chk_LowerExtremityArtery.Location = new System.Drawing.Point(3, 163);
-            this.chk_LowerExtremityArtery.Name = "chk_LowerExtremityArtery";
-            this.chk_LowerExtremityArtery.Size = new System.Drawing.Size(72, 16);
-            this.chk_LowerExtremityArtery.TabIndex = 7;
-            this.chk_LowerExtremityArtery.Text = "下肢动脉";
-            this.chk_LowerExtremityArtery.UseVisualStyleBackColor = true;
-            this.chk_LowerExtremityArtery.CheckedChanged += new System.EventHandler(this.chk_LowerExtremityArtery_CheckedChanged);
-            // 
-            // chk_LowerExtremityVein
-            // 
-            this.chk_LowerExtremityVein.AutoSize = true;
-            this.chk_LowerExtremityVein.Location = new System.Drawing.Point(3, 193);
-            this.chk_LowerExtremityVein.Name = "chk_LowerExtremityVein";
-            this.chk_LowerExtremityVein.Size = new System.Drawing.Size(72, 16);
-            this.chk_LowerExtremityVein.TabIndex = 8;
-            this.chk_LowerExtremityVein.Text = "下肢静脉";
-            this.chk_LowerExtremityVein.UseVisualStyleBackColor = true;
-            this.chk_LowerExtremityVein.CheckedChanged += new System.EventHandler(this.chk_LowerExtremityVein_CheckedChanged);
-            // 
-            // chk_ThoracicCavity
-            // 
-            this.chk_ThoracicCavity.AutoSize = true;
-            this.chk_ThoracicCavity.Location = new System.Drawing.Point(3, 223);
-            this.chk_ThoracicCavity.Name = "chk_ThoracicCavity";
-            this.chk_ThoracicCavity.Size = new System.Drawing.Size(48, 16);
-            this.chk_ThoracicCavity.TabIndex = 9;
-            this.chk_ThoracicCavity.Text = "胸腔";
-            this.chk_ThoracicCavity.UseVisualStyleBackColor = true;
-            this.chk_ThoracicCavity.CheckedChanged += new System.EventHandler(this.chk_ThoracicCavity_CheckedChanged);
-            // 
-            // chk_Urinary
-            // 
-            this.chk_Urinary.AutoSize = true;
-            this.chk_Urinary.Location = new System.Drawing.Point(3, 253);
-            this.chk_Urinary.Name = "chk_Urinary";
-            this.chk_Urinary.Size = new System.Drawing.Size(60, 16);
-            this.chk_Urinary.TabIndex = 10;
-            this.chk_Urinary.Text = "泌尿系";
-            this.chk_Urinary.UseVisualStyleBackColor = true;
-            this.chk_Urinary.CheckedChanged += new System.EventHandler(this.chk_Urinary_CheckedChanged);
-            // 
-            // chk_ResidualUrine
-            // 
-            this.chk_ResidualUrine.AutoSize = true;
-            this.chk_ResidualUrine.Location = new System.Drawing.Point(3, 283);
-            this.chk_ResidualUrine.Name = "chk_ResidualUrine";
-            this.chk_ResidualUrine.Size = new System.Drawing.Size(60, 16);
-            this.chk_ResidualUrine.TabIndex = 11;
-            this.chk_ResidualUrine.Text = "残余尿";
-            this.chk_ResidualUrine.UseVisualStyleBackColor = true;
-            this.chk_ResidualUrine.CheckedChanged += new System.EventHandler(this.chk_ResidualUrine_CheckedChanged);
-            // 
-            // chk_RenalArtery
-            // 
-            this.chk_RenalArtery.AutoSize = true;
-            this.chk_RenalArtery.Location = new System.Drawing.Point(3, 313);
-            this.chk_RenalArtery.Name = "chk_RenalArtery";
-            this.chk_RenalArtery.Size = new System.Drawing.Size(60, 16);
-            this.chk_RenalArtery.TabIndex = 12;
-            this.chk_RenalArtery.Text = "肾动脉";
-            this.chk_RenalArtery.UseVisualStyleBackColor = true;
-            this.chk_RenalArtery.CheckedChanged += new System.EventHandler(this.chk_RenalArtery_CheckedChanged);
-            // 
-            // chk_LymphNode
-            // 
-            this.chk_LymphNode.AutoSize = true;
-            this.chk_LymphNode.Location = new System.Drawing.Point(3, 343);
-            this.chk_LymphNode.Name = "chk_LymphNode";
-            this.chk_LymphNode.Size = new System.Drawing.Size(84, 16);
-            this.chk_LymphNode.TabIndex = 13;
-            this.chk_LymphNode.Text = "浅表淋巴结";
-            this.chk_LymphNode.UseVisualStyleBackColor = true;
-            this.chk_LymphNode.CheckedChanged += new System.EventHandler(this.chk_LymphNode_CheckedChanged);
-            // 
-            // chk_Others
-            // 
-            this.chk_Others.AutoSize = true;
-            this.chk_Others.Location = new System.Drawing.Point(3, 373);
-            this.chk_Others.Name = "chk_Others";
-            this.chk_Others.Size = new System.Drawing.Size(60, 16);
-            this.chk_Others.TabIndex = 14;
-            this.chk_Others.Text = "其他：";
-            this.chk_Others.UseVisualStyleBackColor = true;
-            this.chk_Others.CheckedChanged += new System.EventHandler(this.chk_Others_CheckedChanged);
-            // 
-            // dtp_Abdominal
-            // 
-            this.dtp_Abdominal.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_Abdominal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_Abdominal.Location = new System.Drawing.Point(168, 43);
-            this.dtp_Abdominal.Name = "dtp_Abdominal";
-            this.dtp_Abdominal.Size = new System.Drawing.Size(150, 21);
-            this.dtp_Abdominal.TabIndex = 15;
-            // 
-            // dtp_Heart
-            // 
-            this.dtp_Heart.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_Heart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_Heart.Location = new System.Drawing.Point(168, 73);
-            this.dtp_Heart.Name = "dtp_Heart";
-            this.dtp_Heart.Size = new System.Drawing.Size(150, 21);
-            this.dtp_Heart.TabIndex = 17;
-            // 
-            // dtp_CervicalVascular
-            // 
-            this.dtp_CervicalVascular.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_CervicalVascular.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_CervicalVascular.Location = new System.Drawing.Point(168, 103);
-            this.dtp_CervicalVascular.Name = "dtp_CervicalVascular";
-            this.dtp_CervicalVascular.Size = new System.Drawing.Size(150, 21);
-            this.dtp_CervicalVascular.TabIndex = 18;
-            // 
-            // dtp_Thyroid
-            // 
-            this.dtp_Thyroid.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_Thyroid.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_Thyroid.Location = new System.Drawing.Point(168, 133);
-            this.dtp_Thyroid.Name = "dtp_Thyroid";
-            this.dtp_Thyroid.Size = new System.Drawing.Size(150, 21);
-            this.dtp_Thyroid.TabIndex = 21;
-            // 
-            // dtp_LowerExtremityArtery
-            // 
-            this.dtp_LowerExtremityArtery.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_LowerExtremityArtery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_LowerExtremityArtery.Location = new System.Drawing.Point(168, 163);
-            this.dtp_LowerExtremityArtery.Name = "dtp_LowerExtremityArtery";
-            this.dtp_LowerExtremityArtery.Size = new System.Drawing.Size(150, 21);
-            this.dtp_LowerExtremityArtery.TabIndex = 23;
-            // 
-            // dtp_LowerExtremityVein
-            // 
-            this.dtp_LowerExtremityVein.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_LowerExtremityVein.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_LowerExtremityVein.Location = new System.Drawing.Point(168, 193);
-            this.dtp_LowerExtremityVein.Name = "dtp_LowerExtremityVein";
-            this.dtp_LowerExtremityVein.Size = new System.Drawing.Size(150, 21);
-            this.dtp_LowerExtremityVein.TabIndex = 25;
-            // 
-            // dtp_ThoracicCavity
-            // 
-            this.dtp_ThoracicCavity.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_ThoracicCavity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ThoracicCavity.Location = new System.Drawing.Point(168, 223);
-            this.dtp_ThoracicCavity.Name = "dtp_ThoracicCavity";
-            this.dtp_ThoracicCavity.Size = new System.Drawing.Size(150, 21);
-            this.dtp_ThoracicCavity.TabIndex = 27;
-            // 
-            // dtp_Urinary
-            // 
-            this.dtp_Urinary.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_Urinary.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_Urinary.Location = new System.Drawing.Point(168, 253);
-            this.dtp_Urinary.Name = "dtp_Urinary";
-            this.dtp_Urinary.Size = new System.Drawing.Size(150, 21);
-            this.dtp_Urinary.TabIndex = 29;
-            // 
-            // dtp_ResidualUrine
-            // 
-            this.dtp_ResidualUrine.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_ResidualUrine.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ResidualUrine.Location = new System.Drawing.Point(168, 283);
-            this.dtp_ResidualUrine.Name = "dtp_ResidualUrine";
-            this.dtp_ResidualUrine.Size = new System.Drawing.Size(150, 21);
-            this.dtp_ResidualUrine.TabIndex = 31;
-            // 
-            // dtp_RenalArtery
-            // 
-            this.dtp_RenalArtery.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_RenalArtery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_RenalArtery.Location = new System.Drawing.Point(168, 313);
-            this.dtp_RenalArtery.Name = "dtp_RenalArtery";
-            this.dtp_RenalArtery.Size = new System.Drawing.Size(150, 21);
-            this.dtp_RenalArtery.TabIndex = 33;
-            // 
-            // dtp_LymphNode
-            // 
-            this.dtp_LymphNode.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_LymphNode.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_LymphNode.Location = new System.Drawing.Point(168, 343);
-            this.dtp_LymphNode.Name = "dtp_LymphNode";
-            this.dtp_LymphNode.Size = new System.Drawing.Size(150, 21);
-            this.dtp_LymphNode.TabIndex = 35;
-            // 
-            // dtp_Others
-            // 
-            this.dtp_Others.CustomFormat = "hh：mm yyyy-MM-dd ";
-            this.dtp_Others.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_Others.Location = new System.Drawing.Point(168, 373);
-            this.dtp_Others.Name = "dtp_Others";
-            this.dtp_Others.Size = new System.Drawing.Size(150, 21);
-            this.dtp_Others.TabIndex = 36;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(388, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 12);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "选取要打印项目";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(617, 439);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "动态心电图、TCD、心功能";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.chk_Holter, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.chk_TCD, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.chk_HeartFunction, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.chk_Arteriosclerosis, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.dtp_Holter, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dtp_TCD, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.dtp_HeartFunction, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker8, 1, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 18);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(550, 350);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "检查项目";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(168, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 12);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "预约检查时间和日期";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(388, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 12);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "打印预约单";
-            // 
-            // chk_Holter
-            // 
-            this.chk_Holter.AutoSize = true;
-            this.chk_Holter.Location = new System.Drawing.Point(3, 43);
-            this.chk_Holter.Name = "chk_Holter";
-            this.chk_Holter.Size = new System.Drawing.Size(84, 16);
-            this.chk_Holter.TabIndex = 3;
-            this.chk_Holter.Text = "动态心电图";
-            this.chk_Holter.UseVisualStyleBackColor = true;
-            this.chk_Holter.CheckedChanged += new System.EventHandler(this.chk_Holter_CheckedChanged);
-            // 
-            // chk_TCD
-            // 
-            this.chk_TCD.AutoSize = true;
-            this.chk_TCD.Location = new System.Drawing.Point(3, 73);
-            this.chk_TCD.Name = "chk_TCD";
-            this.chk_TCD.Size = new System.Drawing.Size(84, 16);
-            this.chk_TCD.TabIndex = 4;
-            this.chk_TCD.Text = "经颅多普勒";
-            this.chk_TCD.UseVisualStyleBackColor = true;
-            this.chk_TCD.CheckedChanged += new System.EventHandler(this.chk_TCD_CheckedChanged);
-            // 
-            // chk_HeartFunction
-            // 
-            this.chk_HeartFunction.AutoSize = true;
-            this.chk_HeartFunction.Location = new System.Drawing.Point(3, 103);
-            this.chk_HeartFunction.Name = "chk_HeartFunction";
-            this.chk_HeartFunction.Size = new System.Drawing.Size(60, 16);
-            this.chk_HeartFunction.TabIndex = 5;
-            this.chk_HeartFunction.Text = "心功能";
-            this.chk_HeartFunction.UseVisualStyleBackColor = true;
-            this.chk_HeartFunction.CheckedChanged += new System.EventHandler(this.chk_HeartFunction_CheckedChanged);
-            // 
-            // chk_Arteriosclerosis
-            // 
-            this.chk_Arteriosclerosis.AutoSize = true;
-            this.chk_Arteriosclerosis.Location = new System.Drawing.Point(3, 133);
-            this.chk_Arteriosclerosis.Name = "chk_Arteriosclerosis";
-            this.chk_Arteriosclerosis.Size = new System.Drawing.Size(72, 16);
-            this.chk_Arteriosclerosis.TabIndex = 6;
-            this.chk_Arteriosclerosis.Text = "动脉硬化";
-            this.chk_Arteriosclerosis.UseVisualStyleBackColor = true;
-            this.chk_Arteriosclerosis.CheckedChanged += new System.EventHandler(this.chk_Arteriosclerosis_CheckedChanged);
-            // 
-            // dtp_Holter
-            // 
-            this.dtp_Holter.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_Holter.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_Holter.Location = new System.Drawing.Point(168, 43);
-            this.dtp_Holter.Name = "dtp_Holter";
-            this.dtp_Holter.Size = new System.Drawing.Size(150, 21);
-            this.dtp_Holter.TabIndex = 7;
-            // 
-            // dtp_TCD
-            // 
-            this.dtp_TCD.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_TCD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_TCD.Location = new System.Drawing.Point(168, 73);
-            this.dtp_TCD.Name = "dtp_TCD";
-            this.dtp_TCD.Size = new System.Drawing.Size(150, 21);
-            this.dtp_TCD.TabIndex = 8;
-            // 
-            // dtp_HeartFunction
-            // 
-            this.dtp_HeartFunction.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_HeartFunction.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_HeartFunction.Location = new System.Drawing.Point(168, 103);
-            this.dtp_HeartFunction.Name = "dtp_HeartFunction";
-            this.dtp_HeartFunction.Size = new System.Drawing.Size(150, 21);
-            this.dtp_HeartFunction.TabIndex = 9;
-            // 
-            // dateTimePicker8
-            // 
-            this.dateTimePicker8.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker8.Location = new System.Drawing.Point(168, 133);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(150, 21);
-            this.dateTimePicker8.TabIndex = 10;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(617, 439);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "骨密度、肺功能、脑电图";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.label14, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label15, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label16, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.chk_PulFuc_Respiratory, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.chk_PulFuc_Diffusion, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.chk_BMD, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.chk_EEG, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.dtp_PulFuc_Respiratory, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dtp_PulFuc_Diffusion, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.dtp_BMD, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.dtp_EEG, 1, 4);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 23);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 7;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(550, 350);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "检查项目";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(168, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 12);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "预约检查时间和日期";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(388, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 12);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "选取要打印项目";
-            // 
-            // chk_PulFuc_Respiratory
-            // 
-            this.chk_PulFuc_Respiratory.AutoSize = true;
-            this.chk_PulFuc_Respiratory.Location = new System.Drawing.Point(3, 43);
-            this.chk_PulFuc_Respiratory.Name = "chk_PulFuc_Respiratory";
-            this.chk_PulFuc_Respiratory.Size = new System.Drawing.Size(120, 16);
-            this.chk_PulFuc_Respiratory.TabIndex = 3;
-            this.chk_PulFuc_Respiratory.Text = "肺功能：通气功能";
-            this.chk_PulFuc_Respiratory.UseVisualStyleBackColor = true;
-            this.chk_PulFuc_Respiratory.CheckedChanged += new System.EventHandler(this.chk_PulFuc_Respiratory_CheckedChanged);
-            // 
-            // chk_PulFuc_Diffusion
-            // 
-            this.chk_PulFuc_Diffusion.AutoSize = true;
-            this.chk_PulFuc_Diffusion.Location = new System.Drawing.Point(3, 73);
-            this.chk_PulFuc_Diffusion.Name = "chk_PulFuc_Diffusion";
-            this.chk_PulFuc_Diffusion.Size = new System.Drawing.Size(120, 16);
-            this.chk_PulFuc_Diffusion.TabIndex = 4;
-            this.chk_PulFuc_Diffusion.Text = "肺功能：弥散功能";
-            this.chk_PulFuc_Diffusion.UseVisualStyleBackColor = true;
-            this.chk_PulFuc_Diffusion.CheckedChanged += new System.EventHandler(this.chk_PulFuc_Diffusion_CheckedChanged);
-            // 
-            // chk_BMD
-            // 
-            this.chk_BMD.AutoSize = true;
-            this.chk_BMD.Location = new System.Drawing.Point(3, 103);
-            this.chk_BMD.Name = "chk_BMD";
-            this.chk_BMD.Size = new System.Drawing.Size(60, 16);
-            this.chk_BMD.TabIndex = 5;
-            this.chk_BMD.Text = "骨密度";
-            this.chk_BMD.UseVisualStyleBackColor = true;
-            this.chk_BMD.CheckedChanged += new System.EventHandler(this.chk_BMD_CheckedChanged);
-            // 
-            // chk_EEG
-            // 
-            this.chk_EEG.AutoSize = true;
-            this.chk_EEG.Location = new System.Drawing.Point(3, 133);
-            this.chk_EEG.Name = "chk_EEG";
-            this.chk_EEG.Size = new System.Drawing.Size(60, 16);
-            this.chk_EEG.TabIndex = 6;
-            this.chk_EEG.Text = "脑电图";
-            this.chk_EEG.UseVisualStyleBackColor = true;
-            this.chk_EEG.CheckedChanged += new System.EventHandler(this.chk_EEG_CheckedChanged);
-            // 
-            // dtp_PulFuc_Respiratory
-            // 
-            this.dtp_PulFuc_Respiratory.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_PulFuc_Respiratory.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_PulFuc_Respiratory.Location = new System.Drawing.Point(168, 43);
-            this.dtp_PulFuc_Respiratory.Name = "dtp_PulFuc_Respiratory";
-            this.dtp_PulFuc_Respiratory.Size = new System.Drawing.Size(200, 21);
-            this.dtp_PulFuc_Respiratory.TabIndex = 8;
-            // 
-            // dtp_PulFuc_Diffusion
-            // 
-            this.dtp_PulFuc_Diffusion.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_PulFuc_Diffusion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_PulFuc_Diffusion.Location = new System.Drawing.Point(168, 73);
-            this.dtp_PulFuc_Diffusion.Name = "dtp_PulFuc_Diffusion";
-            this.dtp_PulFuc_Diffusion.Size = new System.Drawing.Size(200, 21);
-            this.dtp_PulFuc_Diffusion.TabIndex = 9;
-            // 
-            // dtp_BMD
-            // 
-            this.dtp_BMD.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_BMD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_BMD.Location = new System.Drawing.Point(168, 103);
-            this.dtp_BMD.Name = "dtp_BMD";
-            this.dtp_BMD.Size = new System.Drawing.Size(200, 21);
-            this.dtp_BMD.TabIndex = 10;
-            // 
-            // dtp_EEG
-            // 
-            this.dtp_EEG.CustomFormat = "hh：mm yyyy-MM-dd";
-            this.dtp_EEG.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_EEG.Location = new System.Drawing.Point(168, 133);
-            this.dtp_EEG.Name = "dtp_EEG";
-            this.dtp_EEG.Size = new System.Drawing.Size(200, 21);
-            this.dtp_EEG.TabIndex = 11;
             // 
             // cmb_PatientDoctor
             // 
@@ -932,11 +233,31 @@
             this.txt_PatientName.Size = new System.Drawing.Size(94, 21);
             this.txt_PatientName.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Location = new System.Drawing.Point(13, 239);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(645, 383);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "已预约的检查项目";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(619, 340);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // ExamDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 651);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ExamDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -944,16 +265,8 @@
             this.Load += new System.EventHandler(this.ExamDisplay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -961,37 +274,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox chk_Abdominal;
-        private System.Windows.Forms.CheckBox chk_Heart;
-        private System.Windows.Forms.CheckBox chk_CervicalVascular;
-        private System.Windows.Forms.CheckBox chk_Thyroid;
-        private System.Windows.Forms.CheckBox chk_LowerExtremityArtery;
-        private System.Windows.Forms.CheckBox chk_LowerExtremityVein;
-        private System.Windows.Forms.CheckBox chk_ThoracicCavity;
-        private System.Windows.Forms.CheckBox chk_Urinary;
-        private System.Windows.Forms.CheckBox chk_ResidualUrine;
-        private System.Windows.Forms.CheckBox chk_RenalArtery;
-        private System.Windows.Forms.CheckBox chk_LymphNode;
-        private System.Windows.Forms.CheckBox chk_Others;
-        private System.Windows.Forms.DateTimePicker dtp_Abdominal;
-        private System.Windows.Forms.DateTimePicker dtp_Heart;
-        private System.Windows.Forms.DateTimePicker dtp_CervicalVascular;
-        private System.Windows.Forms.DateTimePicker dtp_Thyroid;
-        private System.Windows.Forms.DateTimePicker dtp_LowerExtremityArtery;
-        private System.Windows.Forms.DateTimePicker dtp_LowerExtremityVein;
-        private System.Windows.Forms.DateTimePicker dtp_ThoracicCavity;
-        private System.Windows.Forms.DateTimePicker dtp_Urinary;
-        private System.Windows.Forms.DateTimePicker dtp_ResidualUrine;
-        private System.Windows.Forms.DateTimePicker dtp_RenalArtery;
-        private System.Windows.Forms.DateTimePicker dtp_LymphNode;
-        private System.Windows.Forms.DateTimePicker dtp_Others;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ComboBox cmb_PatientDoctor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_PatientBedNum;
@@ -1006,32 +288,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_PatientName;
         private System.Windows.Forms.Button btn_Confrom;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox chk_Holter;
-        private System.Windows.Forms.CheckBox chk_TCD;
-        private System.Windows.Forms.CheckBox chk_HeartFunction;
-        private System.Windows.Forms.CheckBox chk_Arteriosclerosis;
-        private System.Windows.Forms.DateTimePicker dtp_Holter;
-        private System.Windows.Forms.DateTimePicker dtp_TCD;
-        private System.Windows.Forms.DateTimePicker dtp_HeartFunction;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox chk_PulFuc_Respiratory;
-        private System.Windows.Forms.CheckBox chk_PulFuc_Diffusion;
-        private System.Windows.Forms.CheckBox chk_BMD;
-        private System.Windows.Forms.CheckBox chk_EEG;
-        private System.Windows.Forms.DateTimePicker dtp_PulFuc_Respiratory;
-        private System.Windows.Forms.DateTimePicker dtp_PulFuc_Diffusion;
-        private System.Windows.Forms.DateTimePicker dtp_BMD;
-        private System.Windows.Forms.DateTimePicker dtp_EEG;
         private System.Windows.Forms.Label lab_PatientArchiveCode;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

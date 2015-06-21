@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 //Project Include
-using PatientAppiontment.Data;
+using PatientAppiontment.DataBase;
 using PatientAppiontment.Common;
 
 namespace PatientAppiontment.View

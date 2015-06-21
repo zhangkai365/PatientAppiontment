@@ -6,7 +6,7 @@ using System.Text;
 //Project Include
 using System.Data.SqlClient;
 using PatientAppiontment.Common;
-using PatientAppiontment.Data;
+using PatientAppiontment.DataBase;
 
 
 namespace PatientAppiontment.Control

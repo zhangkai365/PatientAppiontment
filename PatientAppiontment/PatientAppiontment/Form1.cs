@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 //Project Include
 using System.Data.SqlClient;
-using PatientAppiontment.Data;
+using PatientAppiontment.DataBase;
 using PatientAppiontment.View;
 using PatientAppiontment.Common;
 

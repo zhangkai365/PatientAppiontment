@@ -6,7 +6,7 @@ using System.Text;
 //project include
 using System.Data.SqlClient;
 
-namespace PatientAppiontment.Data
+namespace PatientAppiontment.DataBase
 {
     public class ConnectionGroup
     {

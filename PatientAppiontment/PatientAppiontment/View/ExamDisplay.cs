@@ -9,9 +9,10 @@ using System.Windows.Forms;
 
 //Project Include
 using PatientAppiontment.Common;
-using PatientAppiontment.Data;
+using PatientAppiontment.DataBase;
 using PatientAppiontment.Control;
 using System.Data.SqlClient;
+using PatientAppiontment.DataPackage;
 
 namespace PatientAppiontment.View
 {
@@ -21,7 +22,7 @@ namespace PatientAppiontment.View
         /// 视窗的显示模式
         /// </summary>
         private ViewType _viewType = ViewType.Initial;
-        private PackageExam _packageExam = new PackageExam();
+        private DataPackPatientCheck _packageExam;
 
         public ExamDisplay(ViewType mnViewType)
         {

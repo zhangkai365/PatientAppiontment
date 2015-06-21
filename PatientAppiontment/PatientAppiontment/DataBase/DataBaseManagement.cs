@@ -7,7 +7,7 @@ using System.Text;
 using System.Data.SqlClient;
 using PatientAppiontment.Common;
 
-namespace PatientAppiontment.Data
+namespace PatientAppiontment.DataBase
 {
     /// <summary>
     /// Appiontment数据库管理
