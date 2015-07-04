@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatientAppiontment.DataPackage
+namespace PatientAppointment.DataPackage
 {
     public class DataPackPatientCheck
     {
@@ -36,7 +36,7 @@ namespace PatientAppiontment.DataPackage
         public string ReportName;
         public string States;
         public string Clinicians;
-        public DateTime Appiontment;
+        public DateTime Appointment;
         public int Reservationnum;
         public string Priority;
         public string RoomName;

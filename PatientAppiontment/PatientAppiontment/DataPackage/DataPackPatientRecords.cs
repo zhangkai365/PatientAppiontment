@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatientAppiontment.DataPackage
+namespace PatientAppointment.DataPackage
 {
-    class DataPackPatientRecord
+    class DataPackPatientRecords
     {
         public string ArchiveCode;
         public string PatientName;
         public string Sex;
         public int Age;
         public string AgeSymbol;
+        public string PrintSymbol;
         public string States;
         public string Contacts;
         public string InsuranceNum;

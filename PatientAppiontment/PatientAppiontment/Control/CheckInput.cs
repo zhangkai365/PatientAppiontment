@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 
 //Project Include
-using PatientAppiontment.Common;
+using PatientAppointment.Common;
 
-namespace PatientAppiontment.Control
+namespace PatientAppointment.Control
 {
     class CheckInput
     {

@@ -1,4 +1,4 @@
-﻿namespace PatientAppiontment.View
+﻿namespace PatientAppointment.View
 {
     partial class Form_DataBaseManagement
     {
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_CreateDataBase_Appiontment = new System.Windows.Forms.Button();
-            this.btn_IsDataBaseExist_Appiontment = new System.Windows.Forms.Button();
+            this.btn_CreateDataBase_Appointment = new System.Windows.Forms.Button();
+            this.btn_IsDataBaseExist_Appointment = new System.Windows.Forms.Button();
             this.lab_DataBaseStatus = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -38,8 +38,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_CreateDataBase_Appiontment);
-            this.groupBox1.Controls.Add(this.btn_IsDataBaseExist_Appiontment);
+            this.groupBox1.Controls.Add(this.btn_CreateDataBase_Appointment);
+            this.groupBox1.Controls.Add(this.btn_IsDataBaseExist_Appointment);
             this.groupBox1.Controls.Add(this.lab_DataBaseStatus);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(20, 11);
@@ -49,25 +49,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "数据库管理";
             // 
-            // btn_CreateDataBase_Appiontment
+            // btn_CreateDataBase_Appointment
             // 
-            this.btn_CreateDataBase_Appiontment.Location = new System.Drawing.Point(147, 157);
-            this.btn_CreateDataBase_Appiontment.Name = "btn_CreateDataBase_Appiontment";
-            this.btn_CreateDataBase_Appiontment.Size = new System.Drawing.Size(171, 45);
-            this.btn_CreateDataBase_Appiontment.TabIndex = 3;
-            this.btn_CreateDataBase_Appiontment.Text = "创建Appiontment数据库";
-            this.btn_CreateDataBase_Appiontment.UseVisualStyleBackColor = true;
-            this.btn_CreateDataBase_Appiontment.Click += new System.EventHandler(this.btn_CreateDataBase_Appiontment_Click);
+            this.btn_CreateDataBase_Appointment.Location = new System.Drawing.Point(147, 157);
+            this.btn_CreateDataBase_Appointment.Name = "btn_CreateDataBase_Appointment";
+            this.btn_CreateDataBase_Appointment.Size = new System.Drawing.Size(171, 45);
+            this.btn_CreateDataBase_Appointment.TabIndex = 3;
+            this.btn_CreateDataBase_Appointment.Text = "创建Appointment数据库";
+            this.btn_CreateDataBase_Appointment.UseVisualStyleBackColor = true;
+            this.btn_CreateDataBase_Appointment.Click += new System.EventHandler(this.btn_CreateDataBase_Appointment_Click);
             // 
-            // btn_IsDataBaseExist_Appiontment
+            // btn_IsDataBaseExist_Appointment
             // 
-            this.btn_IsDataBaseExist_Appiontment.Location = new System.Drawing.Point(147, 86);
-            this.btn_IsDataBaseExist_Appiontment.Name = "btn_IsDataBaseExist_Appiontment";
-            this.btn_IsDataBaseExist_Appiontment.Size = new System.Drawing.Size(171, 45);
-            this.btn_IsDataBaseExist_Appiontment.TabIndex = 2;
-            this.btn_IsDataBaseExist_Appiontment.Text = "检测Appiontment数据库状态";
-            this.btn_IsDataBaseExist_Appiontment.UseVisualStyleBackColor = true;
-            this.btn_IsDataBaseExist_Appiontment.Click += new System.EventHandler(this.btn_IsDataBaseExist_Appiontment_Click);
+            this.btn_IsDataBaseExist_Appointment.Location = new System.Drawing.Point(147, 86);
+            this.btn_IsDataBaseExist_Appointment.Name = "btn_IsDataBaseExist_Appointment";
+            this.btn_IsDataBaseExist_Appointment.Size = new System.Drawing.Size(171, 45);
+            this.btn_IsDataBaseExist_Appointment.TabIndex = 2;
+            this.btn_IsDataBaseExist_Appointment.Text = "检测Appointment数据库状态";
+            this.btn_IsDataBaseExist_Appointment.UseVisualStyleBackColor = true;
+            this.btn_IsDataBaseExist_Appointment.Click += new System.EventHandler(this.btn_IsDataBaseExist_Appointment_Click);
             // 
             // lab_DataBaseStatus
             // 
@@ -108,8 +108,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_CreateDataBase_Appiontment;
-        private System.Windows.Forms.Button btn_IsDataBaseExist_Appiontment;
+        private System.Windows.Forms.Button btn_CreateDataBase_Appointment;
+        private System.Windows.Forms.Button btn_IsDataBaseExist_Appointment;
         private System.Windows.Forms.Label lab_DataBaseStatus;
         private System.Windows.Forms.Label label1;
     }

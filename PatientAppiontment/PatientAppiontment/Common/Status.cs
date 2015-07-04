@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatientAppiontment.Common
+namespace PatientAppointment.Common
 {
     public enum Result
     {
-        Fail = 0,
         Success = 1,
         Error = 2,
-        Initial = 9
-    }
-    public enum Existence
-    {
-        No = 0,
-        Yes = 1,
-        Unknown = 2,
         Initial = 9
     }
 
@@ -38,6 +30,14 @@ namespace PatientAppiontment.Common
         /// 信息字典编号
         /// </summary>
         public string index;
+    }
+
+    public enum Existence
+    {
+        No = 0,
+        Yes = 1,
+        Unknown = 2,
+        Initial = 9
     }
 
     public class Status_Existence

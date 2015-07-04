@@ -5,11 +5,11 @@ using System.Text;
 
 //Project Include
 using System.Data.SqlClient;
-using PatientAppiontment.Common;
-using PatientAppiontment.DataBase;
+using PatientAppointment.Common;
+using PatientAppointment.DataBase;
 
 
-namespace PatientAppiontment.Control
+namespace PatientAppointment.Control
 {
     /// <summary>
     /// 获取今日可用的预约号
@@ -76,7 +76,7 @@ namespace PatientAppiontment.Control
             string _today_string = DateTime.Now.Date.ToString("yyyyMMdd");
             _archiveCode = _pcid + _today_string + "0001";
             //初始化查询语句
-            SqlConnection mnSqlConnection = new SqlConnection(AppConnection.UltraSoundDataBaseConnectionString);
+            SqlConnection mnSqlConnection = new SqlConnection(DataBaseConnection.UltraSoundConnectionString);
             DateTime today = DateTime.Now.Date;
             string mnCmdText = String.Format("SELECT [ArchiveCode] FROM [PatientRecords] WHERE [FoundDate] = '{0}' ORDER BY [ArchiveCode] DESC", today.ToString());
             try
@@ -97,10 +97,10 @@ namespace PatientAppiontment.Control
                     for (int i = 0; i < 999; i++)
                     {
                         _archiveCode = _pcid + _today_string + i.ToString().PadLeft(4, '0');
-                        if (NoConflict(_archiveCode, AppConnection.UltraSoundDataBaseConnectionString) && NoConflict(_archiveCode, AppConnection.AppiontmentDataBaseConnectionString))
+                        if (NoConflict(_archiveCode, DataBaseConnection.UltraSoundConnectionString) && NoConflict(_archiveCode, DataBaseConnection.AppointmentConnectionString))
                         {
                             result.result = Result.Success;
-                            result.message = "Succed. The first person make the appiontment today.";
+                            result.message = "Succed. The first person make the Appointment today.";
                             result.index = "Control.GAC.G.001";
                             archiveCode = _archiveCode;
                             return result;
@@ -131,7 +131,7 @@ namespace PatientAppiontment.Control
                                     for (int i1 = 0; i1 < 999; i1++)
                                     {
                                         _archiveCode = _pcid + _today_string + (todayIndex + i1).ToString().PadLeft(4, '0');
-                                        if (NoConflict(_archiveCode, AppConnection.UltraSoundDataBaseConnectionString) && NoConflict(_archiveCode, AppConnection.AppiontmentDataBaseConnectionString))
+                                        if (NoConflict(_archiveCode, DataBaseConnection.UltraSoundConnectionString) && NoConflict(_archiveCode, DataBaseConnection.AppointmentConnectionString))
                                         {
                                             result.result = Result.Success;
                                             result.message = "Succed. ArchiveCode has been given.";

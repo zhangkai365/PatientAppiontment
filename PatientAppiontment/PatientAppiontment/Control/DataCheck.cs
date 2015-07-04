@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatientAppiontment.Control
+namespace PatientAppointment.Control
 {
     /// <summary>
     /// 数据库中的Check记录的数据格式
@@ -38,7 +38,7 @@ namespace PatientAppiontment.Control
         public string ReportName;
         public string States;
         public string Clinicians;
-        public DateTime Appiontment;
+        public DateTime Appointment;
         public int Reservationnum;
         public string Priority;
         public string RoomName;

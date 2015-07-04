@@ -1,4 +1,4 @@
-﻿namespace PatientAppiontment
+﻿namespace PatientAppointment
 {
     partial class Form1
     {
@@ -31,16 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Menu_NewAppiontment = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_NewAppointment = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_DataBaseManagement_Top = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_ConnectionStringSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_DataBaseManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_AddNewExam = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
-            this.Menu_ConnectionStringSetting = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_DataBaseManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Menu_NewAppiontment,
+            this.Menu_NewAppointment,
             this.Menu_DataBaseManagement_Top,
             this.Menu_Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -73,11 +74,11 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // Menu_NewAppiontment
+            // Menu_NewAppointment
             // 
-            this.Menu_NewAppiontment.Name = "Menu_NewAppiontment";
-            this.Menu_NewAppiontment.Size = new System.Drawing.Size(80, 21);
-            this.Menu_NewAppiontment.Text = "预约新病人";
+            this.Menu_NewAppointment.Name = "Menu_NewAppointment";
+            this.Menu_NewAppointment.Size = new System.Drawing.Size(80, 21);
+            this.Menu_NewAppointment.Text = "预约新病人";
             // 
             // Menu_DataBaseManagement_Top
             // 
@@ -88,6 +89,20 @@
             this.Menu_DataBaseManagement_Top.Size = new System.Drawing.Size(140, 21);
             this.Menu_DataBaseManagement_Top.Text = "数据库管理及连接设置";
             // 
+            // Menu_ConnectionStringSetting
+            // 
+            this.Menu_ConnectionStringSetting.Name = "Menu_ConnectionStringSetting";
+            this.Menu_ConnectionStringSetting.Size = new System.Drawing.Size(160, 22);
+            this.Menu_ConnectionStringSetting.Text = "数据库连接设置";
+            this.Menu_ConnectionStringSetting.Click += new System.EventHandler(this.Menu_ConnectionSetting_Click);
+            // 
+            // Menu_DataBaseManagement
+            // 
+            this.Menu_DataBaseManagement.Name = "Menu_DataBaseManagement";
+            this.Menu_DataBaseManagement.Size = new System.Drawing.Size(160, 22);
+            this.Menu_DataBaseManagement.Text = "数据库管理";
+            this.Menu_DataBaseManagement.Click += new System.EventHandler(this.Menu_DataBaseManagement_Click);
+            // 
             // Menu_Exit
             // 
             this.Menu_Exit.Name = "Menu_Exit";
@@ -97,6 +112,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_AddNewExam);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.listView1);
@@ -131,9 +147,9 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(6, 53);
+            this.listView1.Location = new System.Drawing.Point(6, 107);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(668, 500);
+            this.listView1.Size = new System.Drawing.Size(668, 446);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -147,19 +163,15 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Menu_ConnectionStringSetting
+            // button1
             // 
-            this.Menu_ConnectionStringSetting.Name = "Menu_ConnectionStringSetting";
-            this.Menu_ConnectionStringSetting.Size = new System.Drawing.Size(160, 22);
-            this.Menu_ConnectionStringSetting.Text = "数据库连接设置";
-            this.Menu_ConnectionStringSetting.Click += new System.EventHandler(this.Menu_ConnectionSetting_Click);
-            // 
-            // Menu_DataBaseManagement
-            // 
-            this.Menu_DataBaseManagement.Name = "Menu_DataBaseManagement";
-            this.Menu_DataBaseManagement.Size = new System.Drawing.Size(160, 22);
-            this.Menu_DataBaseManagement.Text = "数据库管理";
-            this.Menu_DataBaseManagement.Click += new System.EventHandler(this.Menu_DataBaseManagement_Click);
+            this.button1.Location = new System.Drawing.Point(370, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 35);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "WritePatientCheckIntoDataBase";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -187,7 +199,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem Menu_NewAppiontment;
+        private System.Windows.Forms.ToolStripMenuItem Menu_NewAppointment;
         private System.Windows.Forms.ToolStripMenuItem Menu_DataBaseManagement_Top;
         private System.Windows.Forms.ToolStripMenuItem Menu_Exit;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -197,6 +209,7 @@
         private System.Windows.Forms.Button btn_AddNewExam;
         private System.Windows.Forms.ToolStripMenuItem Menu_ConnectionStringSetting;
         private System.Windows.Forms.ToolStripMenuItem Menu_DataBaseManagement;
+        private System.Windows.Forms.Button button1;
     }
 }
 

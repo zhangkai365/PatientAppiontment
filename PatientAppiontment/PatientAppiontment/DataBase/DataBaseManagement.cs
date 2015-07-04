@@ -5,22 +5,22 @@ using System.Text;
 
 //Project include
 using System.Data.SqlClient;
-using PatientAppiontment.Common;
+using PatientAppointment.Common;
 
-namespace PatientAppiontment.DataBase
+namespace PatientAppointment.DataBase
 {
     /// <summary>
-    /// Appiontment数据库管理
+    /// Appointment数据库管理
     /// </summary>
     public class DataBaseManagement
     {
         /// <summary>
-        /// Appiontment数据库连接字符串
+        /// Appointment数据库连接字符串
         /// </summary>
         private string connWithoutDatabase = @"Data Source = 192.168.1.70; User ID = zhangkai365; Password = @Zhangkai851983; ";
-        private string connWithDatabase = @"Data Source = 192.168.1.70; User ID = zhangkai365; Password = @Zhangkai851983; Initial Catalog = Appiontment; ";
+        private string connWithDatabase = @"Data Source = 192.168.1.70; User ID = zhangkai365; Password = @Zhangkai851983; Initial Catalog = Appointment; ";
         /// <summary>
-        /// 检测Appiontment数据库是否存在
+        /// 检测Appointment数据库是否存在
         /// </summary>
         /// <returns></returns>
         public Status_Existence DatabaseExistStatus()
@@ -35,13 +35,13 @@ namespace PatientAppiontment.DataBase
             mnSqlConnection.Open();
             try
             {
-                string cmdText = @"SELECT 1 FROM [master]..[sysdatabases] WHERE name = 'appiontment' ";
+                string cmdText = @"SELECT 1 FROM [master]..[sysdatabases] WHERE name = 'Appointment' ";
                 SqlCommand mnSqlCommand = new SqlCommand(cmdText,mnSqlConnection);
                 SqlDataReader mnDataReader = mnSqlCommand.ExecuteReader();
                 if (mnDataReader.Read())
                 {
                     status_Exist.exsitence = Existence.Yes;
-                    status_Exist.message = @"Appiontment DataBase is exist.";
+                    status_Exist.message = @"Appointment DataBase is exist.";
                     status_Exist.index = @"Data.DBM.001";
                 }
                 else
@@ -64,7 +64,7 @@ namespace PatientAppiontment.DataBase
             return status_Exist;
         }
         /// <summary>
-        /// 创建Appiontment数据库
+        /// 创建Appointment数据库
         /// </summary>
         /// <returns></returns>
         public Status CreateDatabase()
@@ -74,12 +74,12 @@ namespace PatientAppiontment.DataBase
                 result = Result.Initial,
                 message = @"This is the initial status.",
                 index = @"Data.DBM.C.009" };
-            //检测Appiontment数据库是否存在
+            //检测Appointment数据库是否存在
             Status_Existence status_Existence = DatabaseExistStatus();
             if (!(status_Existence.exsitence == Existence.No))
             {
                 status_CreateDatabase.result = Result.Fail;
-                status_CreateDatabase.message = @"Appiontment DataBase already exists or its exsistence is Unknown!";
+                status_CreateDatabase.message = @"Appointment DataBase already exists or its exsistence is Unknown!";
                 status_CreateDatabase.index = @"Data.DBM.C.000";
                 return status_CreateDatabase;
             }
@@ -88,18 +88,18 @@ namespace PatientAppiontment.DataBase
             {
                 //may cause error
                 mnSqlConnection.Open();
-                string cmdText = @"CREATE DATABASE appiontment";    
+                string cmdText = @"CREATE DATABASE Appointment";    
                 SqlCommand mnSqlCommand = new SqlCommand(cmdText, mnSqlConnection);
                 //may cause error
                 int result = mnSqlCommand.ExecuteNonQuery();
                 status_CreateDatabase.result = Result.Success;
-                status_CreateDatabase.message = @"Finished Creating the Appiontment database.";
+                status_CreateDatabase.message = @"Finished Creating the Appointment database.";
                 status_CreateDatabase.index = @"Data.DBM.C.001";
             }
             catch (Exception e)
             {
                 status_CreateDatabase.result = Result.Error;
-                status_CreateDatabase.message = @"There is an error when the Appiontment database is creating." + e.Message;
+                status_CreateDatabase.message = @"There is an error when the Appointment database is creating." + e.Message;
                 status_CreateDatabase.index = @"Data.DBM.C.002";
             }
             finally
@@ -110,7 +110,7 @@ namespace PatientAppiontment.DataBase
         }
 
         /// <summary>
-        /// 在Appiontment数据库当中新建表
+        /// 在Appointment数据库当中新建表
         /// </summary>
         /// <returns></returns>
         public Status CreateTable()
@@ -124,7 +124,7 @@ namespace PatientAppiontment.DataBase
             if (!(checkDataBaseExsitence.exsitence == Existence.Yes))
             {
                 status_CreateTable.result = Result.Fail;
-                status_CreateTable.message = @"Failed to create the tables of Appionetment database. because there is no existence of Appiontment database.";
+                status_CreateTable.message = @"Failed to create the tables of Appionetment database. because there is no existence of Appointment database.";
                 status_CreateTable.index = @"Data.DBM.CT.000";
                 return status_CreateTable;
             }

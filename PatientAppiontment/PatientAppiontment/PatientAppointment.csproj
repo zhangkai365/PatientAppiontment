@@ -7,8 +7,8 @@
     <ProjectGuid>{44B288FB-D06B-4377-8DA3-CCE43E7E46EF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PatientAppiontment</RootNamespace>
-    <AssemblyName>PatientAppiontment</AssemblyName>
+    <RootNamespace>PatientAppointment</RootNamespace>
+    <AssemblyName>PatientAppointment</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,13 +54,14 @@
     <Compile Include="Control\Exam_Add.cs" />
     <Compile Include="Control\GetArchiveCode.cs" />
     <Compile Include="Control\PatientCheck.cs" />
-    <Compile Include="DataBase\ConnectionString.cs" />
+    <Compile Include="DataBase\Connection.cs" />
     <Compile Include="DataBase\DataBaseManagement.cs" />
     <Compile Include="DataPackage\DataPackPatientCheck.cs" />
-    <Compile Include="DataPackage\DataPackPatientRecord.cs" />
-    <Compile Include="DataService\PatientCheckCreate.cs" />
-    <Compile Include="DataService\PatientCheckDelete.cs" />
-    <Compile Include="DataService\PatientCheckUpdate.cs" />
+    <Compile Include="DataPackage\DataPackPatientRecords.cs" />
+    <Compile Include="ServiceData\PatientCheck.cs" />
+    <Compile Include="ServiceData\PatientCheckCreate.cs" />
+    <Compile Include="ServiceData\PatientCheckDelete.cs" />
+    <Compile Include="ServiceData\PatientCheckUpdate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceData\PatientRecords.cs" />
     <Compile Include="View\ExamDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +100,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\ExamDisplay.resx">
       <DependentUpon>ExamDisplay.cs</DependentUpon>
@@ -121,7 +124,9 @@
   <ItemGroup>
     <Content Include="Version.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ServiceDataCheck\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

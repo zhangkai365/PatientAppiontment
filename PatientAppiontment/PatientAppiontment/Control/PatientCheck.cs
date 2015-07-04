@@ -4,19 +4,20 @@ using System.Linq;
 using System.Text;
 
 //include
-using PatientAppiontment.DataPackage;
-using PatientAppiontment.DataService;
+using PatientAppointment.DataPackage;
+using PatientAppointment.ServiceData;
+using PatientAppointment.Common;
 
-namespace PatientAppiontment.Control
+namespace PatientAppointment.Control
 {
     class PatientCheck
     {
-        public bool Create()
+        public Status Create()
         {
             PatientCheckCreate mnPatientCheckCreate = new PatientCheckCreate();
             DataPackPatientCheck mnDataPackPatientCheck = new DataPackPatientCheck()
             {
-                ArchiveCode = "201506210001",
+                ArchiveCode = "201506210002",
                 CheckCode = "1",
                 ReDiagnosisTimes = 0,
                 DiagnosisDevice = "Philips IU22",
@@ -28,7 +29,7 @@ namespace PatientAppiontment.Control
                 ClinicalOffice = "10B",
                 BookinDoctor = "刘苏筠",
                 CheckDoctor = "",
-                ClinicalDiagnosis = "",
+                ClinicalDiagnosis = "", 
                 PatientDictation = "",
                 Findings = "",
                 Prompt = "",
@@ -45,7 +46,7 @@ namespace PatientAppiontment.Control
                 ReportName = "",
                 States = "预约后",
                 Clinicians = "孔晓东",
-                Appiontment = DateTime.Today.AddDays(1),
+                Appointment = DateTime.Today.AddDays(1),
                 Reservationnum = 1,
                 Priority = "默认",
                 RoomName = "",

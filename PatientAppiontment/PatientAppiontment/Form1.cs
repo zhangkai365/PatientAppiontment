@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 //Project Include
 using System.Data.SqlClient;
-using PatientAppiontment.DataBase;
-using PatientAppiontment.View;
-using PatientAppiontment.Common;
+using PatientAppointment.DataBase;
+using PatientAppointment.View;
+using PatientAppointment.Common;
+using PatientAppointment.Control;
 
-namespace PatientAppiontment
+namespace PatientAppointment
 {
     public partial class Form1 : Form
     {
@@ -25,7 +26,7 @@ namespace PatientAppiontment
         public void StartConnectiont()
         {
             SqlConnection myConnection = new SqlConnection();
-            myConnection.ConnectionString = AppConnection.UltraSoundDataBaseConnectionString;
+            myConnection.ConnectionString = DataBaseConnection.UltraSoundConnectionString;
             myConnection.Open();
             System.Diagnostics.Stopwatch dataReadTime = new System.Diagnostics.Stopwatch();
             dataReadTime.Start();
@@ -92,57 +93,7 @@ namespace PatientAppiontment
 
         public void ReadPatientCheck()
         {
-            DateTime viewDate = new DateTime();
-            viewDate = dateTimePicker1.Value.Date;
-            string commandText = @"SELECT [ArchiveCode],[CheckCode],[ReDiagnosisTimes],[DiagnosisDevice],[Origin] FROM [dbo].[PatientCheck] WHERE [BookinDate] = '"+ viewDate + @"'";
-            SqlConnection cn = new SqlConnection(AppConnection.UltraSoundDataBaseConnectionString);
-            cn.Open();
-            SqlCommand mnSqlCommand = new SqlCommand(commandText,cn);
-            SqlDataReader mnDataReader = mnSqlCommand.ExecuteReader();
-            List<mnTablePatientCheck> mnListTablePatientCheck = new List<mnTablePatientCheck>();
-            while (mnDataReader.Read())
-            {
-                mnListTablePatientCheck.Add(new mnTablePatientCheck() { 
-                    ArchiveCode = mnDataReader.GetString(0), 
-                    CheckCode = mnDataReader.GetString(1),
-                    ReDiagnosisTimes = mnDataReader.GetInt32(2),
-                    DiagnosisDevice = mnDataReader.GetString(3),
-                    Origin = mnDataReader.GetString(4)
-                });
-            }
-            cn.Close();
-            
-            //ColumnHeader[] CH = new ColumnHeader[5];
-            //CH[0].Text = @"ArchiveCode";
-            //CH[1].Text = @"CheckCode";
-            //CH[2].Text = @"ReDiagnosisTimes";
-            //CH[3].Text = @"DiagnosisDevice";
-            //CH[4].Text = @"Origin";
-            //listView1.Columns.AddRange(CH);
-            //ListViewItem[] LV = new ListViewItem[5];
-            listView1.GridLines = true;
-            listView1.View = System.Windows.Forms.View.Details;
-            listView1.FullRowSelect = true;
-            listView1.Columns.Add(@"Index");
-            listView1.Columns.Add(@"ArchiveCode");
-            listView1.Columns.Add(@"CheckCode");
-            listView1.Columns.Add(@"ReDiagnosisTimes");
-            listView1.Columns.Add(@"DiagnosisDevice");
-            listView1.Columns.Add(@"Origin");
 
-            int recordNum = mnListTablePatientCheck.Count();
-            label2.Text = recordNum.ToString();
-            for (int i = 0; i < mnListTablePatientCheck.Count; i++)
-            {
-                ListViewItem tempItem = new ListViewItem();
-                tempItem.Text = i.ToString();
-                tempItem.SubItems.Add(mnListTablePatientCheck[i].ArchiveCode.ToString());
-                tempItem.SubItems.Add(mnListTablePatientCheck[i].CheckCode.ToString());
-                tempItem.SubItems.Add(mnListTablePatientCheck[i].ReDiagnosisTimes.ToString());
-                tempItem.SubItems.Add(mnListTablePatientCheck[i].DiagnosisDevice.ToString());
-                tempItem.SubItems.Add(mnListTablePatientCheck[i].Origin.ToString());
-                listView1.Items.Add(tempItem);
-            }
         }
 
         private void btn_AddNewExam_Click(object sender, EventArgs e)
@@ -171,6 +122,11 @@ namespace PatientAppiontment
             mnForm_DataBaseManagement.ShowDialog();
         }
 
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PatientCheck mnPatientCheck = new PatientCheck();
+            Status result = mnPatientCheck.Create();
+            MessageBox.Show(result.message);
+        }
     }
 }

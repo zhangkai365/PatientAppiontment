@@ -1,4 +1,4 @@
-﻿namespace PatientAppiontment.View
+﻿namespace PatientAppointment.View
 {
     partial class Form_ConnectionSetting
     {

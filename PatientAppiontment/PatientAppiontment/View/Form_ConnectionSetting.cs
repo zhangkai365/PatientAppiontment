@@ -8,10 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 
 //Project Include
-using PatientAppiontment.DataBase;
+using PatientAppointment.DataBase;
 using System.Data.SqlClient;
 
-namespace PatientAppiontment.View
+namespace PatientAppointment.View
 {
     public partial class Form_ConnectionSetting : Form
     {
@@ -64,7 +64,7 @@ namespace PatientAppiontment.View
             connectionMethod.Update(cmb_DataBaseSelect.SelectedIndex, updateConnection);
             if (cmb_DataBaseSelect.SelectedIndex == 0)
             {
-                if (IsConnectionAvailable(AppConnection.AppiontmentDataBaseConnectionString))
+                if (IsConnectionAvailable(DataBaseConnection.AppointmentConnectionString))
                 {
                     testConnectionResult = @"连接" + cmb_DataBaseSelect.SelectedItem.ToString() + "成功！";
                 }
@@ -75,7 +75,7 @@ namespace PatientAppiontment.View
             }
             if (cmb_DataBaseSelect.SelectedIndex == 1)
             {
-                if (IsConnectionAvailable(AppConnection.UltraSoundDataBaseConnectionString))
+                if (IsConnectionAvailable(DataBaseConnection.UltraSoundConnectionString))
                 {
                     testConnectionResult = "连接" + cmb_DataBaseSelect.SelectedItem.ToString() + "成功！";
                 }
@@ -104,17 +104,17 @@ namespace PatientAppiontment.View
         {
             if (selectDatabaseConnectionIndex == 0)
             {
-                txt_DataSource.Text = AppConnection.AppiontmentDataBaseConnectionGroup.dataSource;
-                txt_InitialCatalog.Text = AppConnection.AppiontmentDataBaseConnectionGroup.initialCatalog;
-                txt_UserID.Text = AppConnection.AppiontmentDataBaseConnectionGroup.userID;
-                txt_Password.Text = AppConnection.AppiontmentDataBaseConnectionGroup.password; 
+                txt_DataSource.Text = DataBaseConnection.AppointmentConnectionGroup.dataSource;
+                txt_InitialCatalog.Text = DataBaseConnection.AppointmentConnectionGroup.initialCatalog;
+                txt_UserID.Text = DataBaseConnection.AppointmentConnectionGroup.userID;
+                txt_Password.Text = DataBaseConnection.AppointmentConnectionGroup.password; 
             }
             if (selectDatabaseConnectionIndex == 1)
             {
-                txt_DataSource.Text = AppConnection.UltraSoundDataBaseConnectionGroup.dataSource;
-                txt_InitialCatalog.Text = AppConnection.UltraSoundDataBaseConnectionGroup.initialCatalog;
-                txt_UserID.Text = AppConnection.UltraSoundDataBaseConnectionGroup.userID;
-                txt_Password.Text = AppConnection.UltraSoundDataBaseConnectionGroup.password;
+                txt_DataSource.Text = DataBaseConnection.UltraSoundConnectionGroup.dataSource;
+                txt_InitialCatalog.Text = DataBaseConnection.UltraSoundConnectionGroup.initialCatalog;
+                txt_UserID.Text = DataBaseConnection.UltraSoundConnectionGroup.userID;
+                txt_Password.Text = DataBaseConnection.UltraSoundConnectionGroup.password;
             }
         }
 

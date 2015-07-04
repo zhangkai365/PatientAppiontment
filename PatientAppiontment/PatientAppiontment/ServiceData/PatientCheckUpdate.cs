@@ -3,112 +3,74 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//
+//include
 using System.Data.SqlClient;
-using PatientAppiontment.DataBase;
-using PatientAppiontment.Common;
+using PatientAppointment.Common;
+using PatientAppointment.DataBase;
+using PatientAppointment.DataPackage;
 
-namespace PatientAppiontment.DataService
+namespace PatientAppointment.ServiceData
 {
-    public class PatientCheckCreate
+    class PatientCheckUpdate
     {
-        public bool Create(DataPackage.DataPackPatientCheck mnDataPackPatientCheck)
+        public Status Update(DataPackPatientCheck mnDataPackPatientCheck)
         {
-            Status DataBaseCreate = new Status() { 
-                result = Result.Initial, 
-                codeSnippetName = "DataService.PatientCheckCreate.Create",
-                index = "DS.10001", 
-                message = "DataService-PatientCheckCreate-intial" 
+            Status result = new Status() { 
+                result = Result.Initial,
+                codeSnippetName = "DataService>>PatientCheckUpdate>>Update",
+                index = "DS.20000",
+                message = "DataService>>PatientCheckUpdate>>Update is initial" 
             };
-            SqlConnection UltrasoundConnection = new SqlConnection(AppConnection.UltraSoundDataBaseConnectionString);
-            SqlConnection AppiontmentConnection = new SqlConnection(AppConnection.AppiontmentDataBaseConnectionString);
-            //写入语句，和参变量
-            string cmdAdd = "Insert Into [PatientChecks] (" +
-                "ArchiveCode," +
-                "CheckCode," +
-                "ReDiagnosisTimes," +
-                "DiagnosisDevice," +
-                "Origin," +
-                "CheckPart," +
-                "CheckPrice," +
-                "HospitalizedNum," +
-                "SickbedNum," +
-                "ClinicalOffice," +
-                "BookinDoctor," +
-                "CheckDoctor," +
-                "ClinicalDiagnosis," +
-                "PatientDictation," +
-                "Findings," +
-                "Prompt," +
-                "BookinDate," +
-                "CheckDate," +
-                "PositiveSymbol," +
-                "ExportSymbol," +
-                "Remark," +
-                "ListNum," +
-                "DictationName," +
-                "ReportName," +
-                "States," +
-                "Clinicians," +
-                "Appiontment," +
-                "ReservationNum," +
-                "Priority," +
-                "RoomName," +
-                "groups," +
-                "ordering," +
-                "Free," +
-                "PatientGroup," +
-                "Code," +
-                "disease," +
-                "Category," +
-                "tipsofabstract," +
-                "diagnosis," +
-                "PatientPriority" +
-                ")" +
-                " Values (" +
-                "@ArchiveCode," +
-                "@CheckCode," +
-                "@ReDiagnosisTimes," +
-                "@DiagnosisDevice," +
-                "@Origin," +
-                "@CheckPart," +
-                "@CheckPrice," +
-                "@HospitalizedNum," +
-                "@SickbedNum," +
-                "@ClinicalOffice," +
-                "@BookinDoctor," +
-                "@CheckDoctor," +
-                "@ClinicalDiagnosis," +
-                "@PatientDictation," +
-                "@Report," +
-                "@PrintSymbol," +
-                "@ExportSymbol," +
-                "@Remark," +
-                "@ListNum," +
-                "@DictationName," +
-                "@ReportName," +
-                "@States," +
-                "@Clinicans," +
-                "@Appiontment," +
-                "@Reservationnum," +
-                "@Priority," +
-                "@RoomName," +
-                "@groups," +
-                "@Ordering," +
-                "@Free," +
-                "@PatientGroup," +
-                "@Code," +
-                "@disease," +
-                "@Category," +
-                "@tipsofabstract," +
-                "@diagnosis," +
-                "@PatientPriority" +
-                ")";
-            //写入语句
-            SqlCommand cmdSql = new SqlCommand(cmdAdd, UltrasoundConnection);
+            string SqlText = "UPDATE [PatientCheck] SET"+
+                "CheckCode = '@CheckCode',"+
+                "RediagnosisDevice = '@RediagnosisDevice',"+
+                "Origin = '@Origin',"+
+                "CheckPart = '@CheckPart',"+
+                "CheckPrice = '@CheckPrice',"+
+                "HospitalizedNum = '@HospitalizedNum',"+
+                "SickbedNum = '@SickbedNum',"+
+                "ClinicalOffice = '@ClinicalOffice',"+
+                "BookinDoctor = '@BookinDoctor',"+
+                "CheckDoctor = '@CheckDoctor',"+
+                "ClinicalDiagnosis = '@ClinicalDiagnosis',"+
+                "PatientDictation = '@PatientDictation',"+
+                "Findings = '@Findings',"+
+                "Prompt = '@Prompt',"+
+                "BookinDate = '@BookinDate',"+
+                "CheckDate = '@CheckDate',"+
+                "PositiveSymbol = '@PositiveSymbol',"+
+                "DoctorDictation = '@DoctorDiction',"+
+                "Report = '@Report',"+
+                "PrintSymbol = '@PrintSymbol',"+
+                "ExportSymbol = '@ExportSymbol',"+
+                "Remark = '@Remark',"+
+                "ListNum = '@ListNum',"+
+                "DictationName = '@DictationName'"+
+                "ReportName = '@ReportName',"+
+                "States = '@States',"+
+                "Clinicians = '@Clinicians',"+
+                "Appointment = '@Appointment',"+
+                "Reservationnum = '@Reservationnum',"+
+                "Priority = '@Priority',"+
+                "RoomName = '@RoomName',"+
+                "groups = '@groups',"+
+                "ordering = '@ordering',"+
+                "Free = '@Free',"+
+                "PatientGroup = '@PatientGroup',"+
+                "code = '@code',"+
+                "disease = '@disease',"+
+                "Category = '@Category',"+
+                "tipsofabstract = '@tipsofabstract',"+
+                "diagnosis = '@diagnosis',"+
+                "PatientPriority = '@PatientPriority'"+
+                "WHERE ArchieveCode = @ArchieveCode"
+                ;
+            //操作数据库的连接命令
+            SqlConnection UltrasoundConnection = new SqlConnection(DataBaseConnection.UltraSoundConnectionString);
+            SqlCommand cmdSql = new SqlCommand(SqlText, UltrasoundConnection);
+            SqlParameter param = new SqlParameter();
             //填充参数集合
             //患者序号
-            SqlParameter param = new SqlParameter();
             param.ParameterName = "@ArchiveCode";
             param.Value = mnDataPackPatientCheck.ArchiveCode;
             param.SqlDbType = System.Data.SqlDbType.VarChar;
@@ -209,13 +171,13 @@ namespace PatientAppiontment.DataService
             param = new SqlParameter();
             param.ParameterName = "@BookinDate";
             param.Value = mnDataPackPatientCheck.BookinDate;
-            param.SqlDbType = System.Data.SqlDbType.Date;
+            param.SqlDbType = System.Data.SqlDbType.SmallDateTime;
             cmdSql.Parameters.Add(param);
             //CheckDate
             param = new SqlParameter();
             param.ParameterName = "@CheckDate";
             param.Value = mnDataPackPatientCheck.CheckDate;
-            param.SqlDbType = System.Data.SqlDbType.Date;
+            param.SqlDbType = System.Data.SqlDbType.SmallDateTime;
             cmdSql.Parameters.Add(param);
             //PositiveSymbol
             param = new SqlParameter();
@@ -247,6 +209,12 @@ namespace PatientAppiontment.DataService
             param.Value = mnDataPackPatientCheck.ExportSymbol;
             param.SqlDbType = System.Data.SqlDbType.Int;
             cmdSql.Parameters.Add(param);
+            //Remark
+            param = new SqlParameter();
+            param.ParameterName = "Remark";
+            param.Value = mnDataPackPatientCheck.Remark;
+            param.SqlDbType = System.Data.SqlDbType.VarChar;
+            cmdSql.Parameters.Add(param);
             //ListNum
             param = new SqlParameter();
             param.ParameterName = "@ListNum";
@@ -267,8 +235,8 @@ namespace PatientAppiontment.DataService
             cmdSql.Parameters.Add(param);
             //States
             param = new SqlParameter();
-            param.ParameterName = "@CheckPrice";
-            param.Value = mnDataPackPatientCheck.CheckPrice;
+            param.ParameterName = "@States";
+            param.Value = mnDataPackPatientCheck.States;
             param.SqlDbType = System.Data.SqlDbType.VarChar;
             cmdSql.Parameters.Add(param);
             //Clinicians
@@ -277,11 +245,11 @@ namespace PatientAppiontment.DataService
             param.Value = mnDataPackPatientCheck.Clinicians;
             param.SqlDbType = System.Data.SqlDbType.VarChar;
             cmdSql.Parameters.Add(param);
-            //Appiontment
+            //Appointment
             param = new SqlParameter();
             param.ParameterName = "@Appointment";
-            param.Value = mnDataPackPatientCheck.Appiontment;
-            param.SqlDbType = System.Data.SqlDbType.Date;
+            param.Value = mnDataPackPatientCheck.Appointment;
+            param.SqlDbType = System.Data.SqlDbType.SmallDateTime;
             cmdSql.Parameters.Add(param);
             //Reservatiannum
             param = new SqlParameter();
@@ -361,27 +329,27 @@ namespace PatientAppiontment.DataService
             param.Value = mnDataPackPatientCheck.PatientPriority;
             param.SqlDbType = System.Data.SqlDbType.Int;
             cmdSql.Parameters.Add(param);
-
-            //将数据写入数据库
+            //开始写入过程
             try
             {
-                int writeline = -1;
-                writeline = cmdSql.ExecuteNonQuery();
-                if (writeline == 1)
-                {
-                    DataBaseCreate = new Status()
-                    {
-                        result = Result.Success,
-                        codeSnippetName = "DataService.PatientCheckCreate.Create",
-                        index = "DS.10001",
-                        message = "DataService-PatientCheckCreate-intial"
-                    };
-                }
-                return true;
+                UltrasoundConnection.Open();
+                cmdSql.ExecuteNonQuery();
+                result.result = Result.Success;
+                result.index = "DS.20001";
+                result.message = "successfully update the data.";
+                return result;
+
             }
-            catch
+            catch (Exception e)
             {
-                return false;
+                result.result = Result.Error;
+                result.index = "DS.20002";
+                result.message = "There is an error happened when update the data to the database,the error is:" + e.Message;
+                return result;
+            }
+            finally
+            {
+                UltrasoundConnection.Close();
             }
         }
     }

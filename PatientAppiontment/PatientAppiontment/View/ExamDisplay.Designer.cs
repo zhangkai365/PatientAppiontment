@@ -1,4 +1,4 @@
-﻿namespace PatientAppiontment.View
+﻿namespace PatientAppointment.View
 {
     partial class ExamDisplay
     {
@@ -262,7 +262,6 @@
             this.Name = "ExamDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "检查项目";
-            this.Load += new System.EventHandler(this.ExamDisplay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
