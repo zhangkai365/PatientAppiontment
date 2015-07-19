@@ -15,6 +15,10 @@ namespace PatientAppointment.Common
     public class Status
     {
         /// <summary>
+        /// 信息字典编号
+        /// </summary>
+        public string index;
+        /// <summary>
         /// 执行的代码片段名称
         /// </summary>
         public string codeSnippetName;
@@ -26,10 +30,7 @@ namespace PatientAppointment.Common
         /// 默认的信息
         /// </summary>
         public string message;
-        /// <summary>
-        /// 信息字典编号
-        /// </summary>
-        public string index;
+
     }
 
     public enum Existence

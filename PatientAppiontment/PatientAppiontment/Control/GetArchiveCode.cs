@@ -145,7 +145,7 @@ namespace PatientAppointment.Control
                         }
                     }
                 }//else 结束 不是第一位预约患者的流程
-                result.result = Result.Fail;
+                result.result = Result.Error;
                 result.message = "Unable to get an availabe ArchiveCode.Try another day.";
                 result.index = "Control.GAC.G.000";
             }

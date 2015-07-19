@@ -16,7 +16,7 @@ namespace PatientAppointment.DataPackage
         public string States;
         public string Contacts;
         public string InsuranceNum;
-        public DateTime FoundDate;
+        public string FoundDate;
         public string MarriageState;
         public int PregnancyTimes;
         public int ProcreationTimes;

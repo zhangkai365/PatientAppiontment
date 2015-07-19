@@ -78,7 +78,7 @@ namespace PatientAppointment.DataBase
             Status_Existence status_Existence = DatabaseExistStatus();
             if (!(status_Existence.exsitence == Existence.No))
             {
-                status_CreateDatabase.result = Result.Fail;
+                status_CreateDatabase.result = Result.Error;
                 status_CreateDatabase.message = @"Appointment DataBase already exists or its exsistence is Unknown!";
                 status_CreateDatabase.index = @"Data.DBM.C.000";
                 return status_CreateDatabase;
@@ -123,7 +123,7 @@ namespace PatientAppointment.DataBase
             Status_Existence checkDataBaseExsitence = DatabaseExistStatus();
             if (!(checkDataBaseExsitence.exsitence == Existence.Yes))
             {
-                status_CreateTable.result = Result.Fail;
+                status_CreateTable.result = Result.Error;
                 status_CreateTable.message = @"Failed to create the tables of Appionetment database. because there is no existence of Appointment database.";
                 status_CreateTable.index = @"Data.DBM.CT.000";
                 return status_CreateTable;

@@ -59,9 +59,6 @@
     <Compile Include="DataPackage\DataPackPatientCheck.cs" />
     <Compile Include="DataPackage\DataPackPatientRecords.cs" />
     <Compile Include="ServiceData\PatientCheck.cs" />
-    <Compile Include="ServiceData\PatientCheckCreate.cs" />
-    <Compile Include="ServiceData\PatientCheckDelete.cs" />
-    <Compile Include="ServiceData\PatientCheckUpdate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +68,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceData\PatientRecords.cs" />
+    <Compile Include="TestUnit\TestPatientCheck.cs" />
+    <Compile Include="TestUnit\TestPatientRecords.cs" />
     <Compile Include="View\ExamDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +87,12 @@
     </Compile>
     <Compile Include="View\Form_DataBaseManagement.Designer.cs">
       <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form_TestUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form_TestUnit.Designer.cs">
+      <DependentUpon>Form_TestUnit.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -110,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form_DataBaseManagement.resx">
       <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form_TestUnit.resx">
+      <DependentUpon>Form_TestUnit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

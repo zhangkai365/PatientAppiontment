@@ -13,6 +13,7 @@ using PatientAppointment.DataBase;
 using PatientAppointment.View;
 using PatientAppointment.Common;
 using PatientAppointment.Control;
+using PatientAppointment.TestUnit;
 
 namespace PatientAppointment
 {
@@ -122,11 +123,11 @@ namespace PatientAppointment
             mnForm_DataBaseManagement.ShowDialog();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void 测试ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PatientCheck mnPatientCheck = new PatientCheck();
-            Status result = mnPatientCheck.Create();
-            MessageBox.Show(result.message);
+            Form_TestUnit mnForm_TestUnit = new Form_TestUnit();
+            mnForm_TestUnit.ShowDialog();
         }
+
     }
 }

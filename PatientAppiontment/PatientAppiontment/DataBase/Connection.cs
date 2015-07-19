@@ -76,14 +76,14 @@ namespace PatientAppointment.DataBase
             DataBaseConnection.AppointmentConnectionGroup.intergratedSecurity = false;
             DataBaseConnection.AppointmentConnectionGroup.userID = @"zhangkai365";
             DataBaseConnection.AppointmentConnectionGroup.password = @"@Zhangkai851983";
-            DataBaseConnection.AppointmentConnectionGroup.initialCatalog = @"engchaosheng";
+            DataBaseConnection.AppointmentConnectionGroup.initialCatalog = @"appointment";
 
             DataBaseConnection.UltraSoundConnectionGroup.caption = @"预约数据库";
             DataBaseConnection.UltraSoundConnectionGroup.dataSource = @"192.168.1.70";
             DataBaseConnection.UltraSoundConnectionGroup.intergratedSecurity = false;
             DataBaseConnection.UltraSoundConnectionGroup.password = @"@Zhangkai851983";
             DataBaseConnection.UltraSoundConnectionGroup.userID = @"zhangkai365";
-            DataBaseConnection.UltraSoundConnectionGroup.initialCatalog = @"Appointment";
+            DataBaseConnection.UltraSoundConnectionGroup.initialCatalog = @"engchaosheng";
 
             DataBaseConnection.AppointmentConnectionString = Generation(DataBaseConnection.AppointmentConnectionGroup);
             DataBaseConnection.UltraSoundConnectionString = Generation(DataBaseConnection.UltraSoundConnectionGroup);

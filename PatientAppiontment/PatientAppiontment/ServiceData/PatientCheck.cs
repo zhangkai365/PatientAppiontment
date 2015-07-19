@@ -24,8 +24,8 @@ namespace PatientAppointment.ServiceData
             {
                 result = Result.Initial,
                 codeSnippetName = "DataService.PatientCheckCreate.Create",
-                index = "DS.10001",
-                message = "DataService-PatientCheckCreate-intial"
+                index = "SD.PC.C000",
+                message = "DataService>>PatientCheck>>Create>>intial"
             };
             SqlConnection UltrasoundConnection = new SqlConnection(DataBaseConnection.UltraSoundConnectionString);
             SqlConnection AppointmentConnection = new SqlConnection(DataBaseConnection.AppointmentConnectionString);

@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu_NewAppointment,
             this.Menu_DataBaseManagement_Top,
+            this.测试ToolStripMenuItem,
             this.Menu_Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -112,7 +113,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_AddNewExam);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.listView1);
@@ -163,15 +163,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // 测试ToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(370, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "WritePatientCheckIntoDataBase";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
+            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.测试ToolStripMenuItem.Text = "测试";
+            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -209,7 +206,7 @@
         private System.Windows.Forms.Button btn_AddNewExam;
         private System.Windows.Forms.ToolStripMenuItem Menu_ConnectionStringSetting;
         private System.Windows.Forms.ToolStripMenuItem Menu_DataBaseManagement;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem;
     }
 }
 
