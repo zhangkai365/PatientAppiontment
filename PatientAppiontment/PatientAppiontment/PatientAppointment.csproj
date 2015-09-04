@@ -58,6 +58,9 @@
     <Compile Include="DataBase\DataBaseManagement.cs" />
     <Compile Include="DataPackage\DataPackPatientCheck.cs" />
     <Compile Include="DataPackage\DataPackPatientRecords.cs" />
+    <Compile Include="ServiceDataCheck\CheckBasic.cs" />
+    <Compile Include="ServiceDataCheck\CheckNum.cs" />
+    <Compile Include="ServiceDataCheck\Common.cs" />
     <Compile Include="ServiceData\PatientCheck.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,11 +91,23 @@
     <Compile Include="View\Form_DataBaseManagement.Designer.cs">
       <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form_PatientInfoAppiontment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form_PatientInfoAppiontment.Designer.cs">
+      <DependentUpon>Form_PatientInfoAppiontment.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form_TestUnit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Form_TestUnit.Designer.cs">
       <DependentUpon>Form_TestUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\From_AppiontmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\From_AppiontmentView.Designer.cs">
+      <DependentUpon>From_AppiontmentView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -116,8 +131,14 @@
     <EmbeddedResource Include="View\Form_DataBaseManagement.resx">
       <DependentUpon>Form_DataBaseManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Form_PatientInfoAppiontment.resx">
+      <DependentUpon>Form_PatientInfoAppiontment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form_TestUnit.resx">
       <DependentUpon>Form_TestUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\From_AppiontmentView.resx">
+      <DependentUpon>From_AppiontmentView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -132,9 +153,7 @@
   <ItemGroup>
     <Content Include="Version.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ServiceDataCheck\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
