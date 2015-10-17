@@ -35,15 +35,17 @@
             this.Menu_DataBaseManagement_Top = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_ConnectionStringSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_DataBaseManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_AddNewExam = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
-            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,6 +106,13 @@
             this.Menu_DataBaseManagement.Text = "数据库管理";
             this.Menu_DataBaseManagement.Click += new System.EventHandler(this.Menu_DataBaseManagement_Click);
             // 
+            // 测试ToolStripMenuItem
+            // 
+            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
+            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.测试ToolStripMenuItem.Text = "测试";
+            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
+            // 
             // Menu_Exit
             // 
             this.Menu_Exit.Name = "Menu_Exit";
@@ -113,9 +122,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_AddNewExam);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -145,14 +155,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "label2";
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(6, 107);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(668, 446);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(445, 18);
@@ -163,12 +165,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // 测试ToolStripMenuItem
+            // button1
             // 
-            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
-            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.测试ToolStripMenuItem.Text = "测试";
-            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
+            this.button1.Location = new System.Drawing.Point(451, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "显示预约窗口";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 112);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(635, 383);
+            this.dataGridView1.TabIndex = 11;
             // 
             // Form1
             // 
@@ -186,6 +199,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,12 +215,13 @@
         private System.Windows.Forms.ToolStripMenuItem Menu_Exit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_AddNewExam;
         private System.Windows.Forms.ToolStripMenuItem Menu_ConnectionStringSetting;
         private System.Windows.Forms.ToolStripMenuItem Menu_DataBaseManagement;
         private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

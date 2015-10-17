@@ -9,7 +9,7 @@ namespace PatientAppointment.ServiceDataCheck
     {
         public CheckResult NoEmptyString(string checkString)
         {
- 
+            return new CheckResult() { result = true, Message = "This string is not empty." };
         }
     }
 }
